@@ -20,7 +20,7 @@
 
     <nav class="nav-bar">
         <ul class="menu">
-            <li><a href="#inicio" class="menu-link">E aí tudo bem?</a></li>
+            <li><a href="#intro" class="menu-link">E aí tudo bem?</a></li>
             <li><a href="#skills" class="menu-link">Skills</a></li>
             <li><a href="#techs" class="menu-link">Tecnologias</a></li>
             <li><a href="#languages" class="menu-link">Idiomas</a></li>
@@ -30,24 +30,26 @@
             <li><a href="#contato" class="menu-link">Contato</a></li>
         </ul>
     </nav>
-    
+
     <main>
-        <section id="inicio" class="topo">
+        <section id="intro" class="intro">
             <!-- <h2>Inicio</h2> -->
             <article class="perfil" data-tipo="img-perfil">
-                <img src="../images/photo.jpeg" alt="foto de perfil junior" class="foto-perfil">
+                <img src="../images/foto.jpeg" alt="foto de perfil junior" class="foto-perfil">
                 <h1>Alexandre Júnior</h1>
-                <p class="topo-subtitulo"> E aí, vamos inovar?
-                    <br> Meu nome é Alexandre Júnior e sou desenvolvedor e estudante de engenharia de software.
-                    <br> Ofereço soluções web e mobile como serviços freelancer além de consultoria em alguns casos.
-                    Tenho interesse em gerencia de projetos, cyber segurança e IA.
-                </p>
-                <p class="topo-subtitulo">
-                    Chamei sua atenção? Olha minhas competências com mais calma aqui!
-                    <!-- download cv -->
-                <a href="#contato">Quer conversar mais sobre?</a>
-
-                </p>
+                <p class="intro-title"> E aí, vamos inovar?</p>
+                <div id="intro-box" class="intro-box">
+                    <p class="intro-paragraph">
+                        Meu nome é Alexandre Júnior e sou desenvolvedor e estudante de engenharia de software.
+                        Ofereço soluções web e mobile como serviços freelancer além de consultoria em alguns casos.
+                        Tenho interesse em gerencia de projetos, cyber segurança e IA.
+                    </p>
+                    <p class="intro-paragraph">
+                        Chamei sua atenção? Olha minhas competências com mais calma <a href="#skills">aqui!</a><br>
+                        <!-- download cv -->
+                        <a href="#contato">Quer conversar mais sobre?</a>
+                    </p>
+                </div>
             </article>
         </section>
         <section id="skills" class="skills">
@@ -74,7 +76,7 @@
         <section id="techs" class="techs">
             <h2>Tecnologias</h2>
             <article>
-                <section id="frontend"> Front End</section>
+                <section id="frontend" class="frontend"> Front End</section>
                 <section id="backend"> Back End</section>
                 <section id="mobile"> Mobile</section>
                 <section id="database"> Banco de Dados</section>
@@ -85,141 +87,154 @@
                 <section id="interest"> Interesses </section>
             </article>
         </section>
-        <section id="languages">
+        <section id="languages" class="languages">
             <h2>Idiomas</h2>
-            <p>Classificando os níveis do idioma em 6 partes sendo elas respectivamente:<br>
-                <li>Iniciante</li>
-                <li>Básico</li>
-                <li>Intermediário</li>
-                <li>Avançado</li>
-                <li>Proeficiente</li>
-                <li>Nativo</li>
-            </p>
+            <div>
+
+                <p>Classificando os níveis do idioma em 6 partes sendo elas respectivamente:</p>
+                <ul>
+                    <li>Iniciante</li>
+                    <li>Básico</li>
+                    <li>Intermediário</li>
+                    <li>Avançado</li>
+                    <li>Proeficiente</li>
+                    <li>Nativo</li>
+                </ul>
+            </div>
             <article>
-                <h3>
-                    <p>Alemão
-                        <!-- Iniciante -->
-                        <li>Escrita</li>
-                        <li>Escuta</li>
-                        <li>Fala</li>
-                        <li>Leitura</li>
-                    </p>
-                </h3>
-                <h3>
-                    <p>Espanhol
-                        <!-- basico -->
-                        <li>Escrita</li>
-                        <li>Escuta</li>
-                        <li>Fala</li>
-                        <li>Leitura</li>
-                    </p>
-                </h3>
-                <h3>
-                    <p>Francês
-                        <!-- Iniciante -->
-                        <li>Escrita</li>
-                        <li>Escuta</li>
-                        <li>Fala</li>
-                        <li>Leitura</li>
-                    </p>
-                </h3>
-                <h3>
-                    <p>Inglês
-                        <!-- Avançado -->
-                        <li>Escrita</li>
-                        <li>Escuta</li>
-                        <li>Fala</li>
-                        <li>Leitura</li>
-                    </p>
-                </h3>
-                <h3>
-                    <p>Italiano
-                        <!-- basico -->
-                        <li>Escrita</li>
-                        <li>Escuta</li>
-                        <li>Fala</li>
-                        <li>Leitura</li>
-                    </p>
-                </h3>
-                <h3>
-                    <p>Português
-                        <!-- nativo -->
-                        <li>Escrita</li>
-                        <li>Escuta</li>
-                        <li>Fala</li>
-                        <li>Leitura</li>
-                    </p>
+                <h3>Alemão</h3>
+                <!-- Iniciante -->
+                <li>Escrita</li>
+                <li>Escuta</li>
+                <li>Fala</li>
+                <li>Leitura</li>
+
+                <h3>Espanhol</h3>
+                <!-- basico -->
+                <li>Escrita</li>
+                <li>Escuta</li>
+                <li>Fala</li>
+                <li>Leitura</li>
+                <h3>Francês</h3>
+                <!-- Iniciante -->
+                <li>Escrita</li>
+                <li>Escuta</li>
+                <li>Fala</li>
+                <li>Leitura</li>
+
+                <h3>Inglês</h3>
+                <!-- Avançado -->
+                <li>Escrita</li>
+                <li>Escuta</li>
+                <li>Fala</li>
+                <li>Leitura</li>
+                <h3>Italiano</h3>
+                <!-- basico -->
+                <li>Escrita</li>
+                <li>Escuta</li>
+                <li>Fala</li>
+                <li>Leitura</li>
+                <h3>Português</p>
+                    <!-- nativo -->
+                    <li>Escrita</li>
+                    <li>Escuta</li>
+                    <li>Fala</li>
+                    <li>Leitura</li>
                 </h3>
             </article>
         </section>
-        <section id="projects">
-            <h2> Meus Projetos</h2>
-            <article class="projet-card" data-tipo="projeto-pessoal">
-                <h3>Harmony Aesthetics Zentrum</h3>
-                <img src="" alt="imagem do projeto da clinica de estetica" class="img-project">
-                <p>
-                    Projeto Web feito para atualizar web site de da Clínica de Estetica, clinica localizada em Luzern -
-                    Suiça, com varios serviços de beleza com agenda aberta esperando voce.
-                </p>
-                <!-- talvez n de pra ver pq é um projeto particular -->
-                <a href="https://github.com/DevJuniorss/HarmonyClinica" target="_blank" class="btn-projeto">Ver repositório</a>
-            </article>
-            <article class="projet-card" data-tipo="projeto-pessoal">
-                <h3>LiFitness</h3>
-                <img src="" alt="imagem do projeto LiFitness em busca da saúde e bem estar." class="img-project">
-                <p>
-                    Projeto Mobile para conectar você que quer sair do sedentarismo a profissionais capazes nas areas da
-                    nutrição e personal traineers.
-                    Com facil uso e interface amigavel, este projeto ajuda a pessoas a ingressarem na atividade física.
-                </p>
-                <a href="https://github.com/DevJuniorss/LiFitness" target="_blank" class="btn-projeto">Ver
-                    repositório</a>
-            </article>
-            <article class="projet-card" data-tipo="projeto-pessoal">
-                <h3>FindMe</h3>
-                <img src="" alt="imagem do projeto Findme" class="img-project">
-                <p>
-                    Projeto Mobile para agilizar e facilitar as marcações de consulta com a psipedagoga e os pais das
-                    crianças que buscam acompanhamento.
-                </p>
-                <a href="https://github.com/DevJuniorss/Findme" target="_blank" class="btn-projeto">Ver repositório</a>
-            </article>
-            <article class="projet-card" data-tipo="projeto-pessoal">
-                <h3>Siqueira Construção</h3>
-                <img src="" alt="imagem do projeto Siqueira Construção" class="img-project">
-                <p>
-                    Projeto Web para vendas de material de construção e controle de estoque da empresa.
-                </p>
-                <a href="https://github.com/DevJuniorss/DepositoSiqueira" target="_blank" class="btn-projeto">Ver
-                    repositório</a>
-            </article>
-            <article class="projet-card" data-tipo="projeto-pessoal">
-                <h3>Kerosene Store</h3>
-                <img src="" alt="imagem do projeto Kerosene Store." class="img-project">
-                <p>
-                    Projeto Web para venda de suplementos e acessorios de academia.
-                </p>
-                <a href="https://github.com/DevJuniorss/KerozeneStore" target="_blank" class="btn-projeto">Ver
-                    repositório</a>
-            </article>
+        <section id="projects" class="projects">
+            <h2 class="my-projects"> Meus Projetos</h2>
+            <div class="projects-box">
+                <article class="project-card" data-tipo="projeto-pessoal">
+                    <h3 class="project-title">Harmony Aesthetics Zentrum</h3>
+                    <img src="../images/loja.png" alt="imagem do projeto da clinica de estetica" class="img-project">
+                    <p class="project-info">
+                        Projeto Web feito para atualizar web site de da Clínica de Estetica, clinica localizada em
+                        Luzern -
+                        Suiça, com varios serviços de beleza com agenda aberta esperando voce.
+                        <!-- talvez n de pra ver pq é um projeto particular -->
+                        <a href="https://github.com/DevJuniorss/HarmonyClinica" target="_blank" class="btn-projeto">Ver
+                            repositório</a>
+                    </p>
+                </article>
+                <article class="project-card" data-tipo="projeto-pessoal">
+                    <h3 class="project-title">LiFitness</h3>
+                    <img src="../images/loja.png" alt="imagem do projeto LiFitness em busca da saúde e bem estar."
+                        class="img-project">
+                    <p class="project-info">
+                        Projeto Mobile para conectar você que quer sair do sedentarismo a profissionais capazes nas
+                        areas da
+                        nutrição e personal traineers.
+                        Com facil uso e interface amigavel, este projeto ajuda a pessoas a ingressarem na atividade
+                        física.
+                        <a href="https://github.com/DevJuniorss/LiFitness" target="_blank" class="btn-projeto">Ver
+                            repositório</a>
+                    </p>
+                </article>
+                <article class="project-card" data-tipo="projeto-pessoal">
+                    <h3 class="project-title">FindMe</h3>
+                    <img src="../images/loja.png" alt="imagem do projeto Findme" class="img-project">
+                    <p class="project-info">
+                        Projeto Mobile para agilizar e facilitar as marcações de consulta com a psipedagoga e os pais
+                        das
+                        crianças que buscam acompanhamento.
+                        <a href="https://github.com/DevJuniorss/Findme" target="_blank" class="btn-projeto">Ver
+                            repositório</a>
+                    </p>
+                </article>
+                <article class="project-card" data-tipo="projeto-pessoal">
+                    <h3 class="project-title">Siqueira Construção</h3>
+                    <img src="../images/loja.png" alt="imagem do projeto Siqueira Construção" class="img-project">
+                    <p class="project-info">
+                        Projeto Web para vendas de material de construção e controle de estoque da empresa.
+                        <a href="https://github.com/DevJuniorss/DepositoSiqueira" target="_blank"
+                            class="btn-projeto">Ver
+                            repositório</a>
+                    </p>
+                </article>
+                <article class="project-card" data-tipo="projeto-pessoal">
+                    <h3 class="project-title">Kerosene Store</h3>
+                    <img src="../images/loja.png" alt="imagem do projeto Kerosene Store." class="img-project">
+                    <p class="project-info">
+                        Projeto Web para venda de suplementos e acessorios de academia.
+                        <a href="https://github.com/DevJuniorss/KerozeneStore" target="_blank" class="btn-projeto">Ver
+                            repositório</a>
+                    </p>
+                </article>
+                <article class="project-card" data-tipo="projeto-pessoal">
+                    <h3 class="project-title">MazeRunner</h3>
+                    <img src="../images/loja.png" alt="imagem do projeto Kerosene Store." class="img-project">
+                    <p class="project-info">
+                        Pequeno jogo usando alguns algoritmos de busca.
+                        <a href="https://github.com/DevJuniorss/MazeRunner" target="_blank" class="btn-projeto">Ver
+                            repositório</a>
+                    </p>
+                </article>
+            </div>
         </section>
-        <section id="exp">
+        <section id="exp" class="exp">
             <h2>Experiencias Profissionais</h2>
             <article>
                 <h3 id="cargo"> Técnico de Análise de Dados e Sistemas </h3>
                 <h4 id="empresa">Prefeitura Municipal de Senador Pompeu</h4>
-                <p>Durante pouco mais de 2 anos estive atuando sob o cargo de Analista no setor do cadastro únicos e
-                    dando suporte a mais 9 setores da prefeitura.<br> Tinha diversas funções e encargos a depender da necessidade, dentre os quais ajudei ativamente e idealizei algumas das seguintes melhorias:
+                <p id="conteudo" class="conteudo">Durante pouco mais de 2 anos estive atuando sob o cargo de Analista no
+                    setor do cadastro únicos e
+                    dando suporte a mais 9 setores da prefeitura.<br> Tinha diversas funções e encargos a depender da
+                    necessidade, dentre os quais ajudei ativamente e idealizei algumas das seguintes melhorias:
                 <ul>
-                    <li>Desenvolvi sistemas internos para otimizar fluxos de atendimento, reduzindo a superlotação durante a pandemia em 50%.</li>
-                    <li>Realizei análises de dados em 3 departamentos municipais, melhorando a precisão dos relatórios em 75% e apoiando 5 decisões políticas importantes.</li>
-                    <li>Atuei como contato técnico para 7 equipes de difentes setores, garantindo entregas no prazo e operação estável dos sistemas</li>
+                    <li>Desenvolvi sistemas internos para otimizar fluxos de atendimento, reduzindo a superlotação
+                        durante a pandemia em 50%.</li>
+                    <li>Realizei análises de dados em 3 departamentos municipais, melhorando a precisão dos relatórios
+                        em 75% e apoiando 5 decisões políticas importantes.</li>
+                    <li>Atuei como contato técnico para 7 equipes de difentes setores, garantindo entregas no prazo e
+                        operação estável dos sistemas</li>
                     <li>mplementei melhorias de segurança e desempenho em sistemas.</li>
                 </ul>
                 </p>
             </article>
         </section>
-        <section id="diplomas">
+        <section id="diplomas" class="diplomas">
             <h2>Graduações</h2>
             <ul>
                 <li>Engenharia de Software
@@ -256,7 +271,7 @@
             </ul>
             <article></article>
         </section>
-        <section id="contato">
+        <section id="contato" class="contato">
             <h2>Contato</h2>
             <article>
                 <p>
@@ -275,14 +290,16 @@
 
     <footer>
         <p>&copy; Todos os direitos reservados</p>
-        <p><div class="social">
+        <p>
+        <div class="social">
             Linkedin: <a href="https://www.linkedin.com/in/devjuniorss" target="_blank">LinkedIn</a> |
             GitHub: <a href="https://github.com/DevJuniorss" target="_blank">DevJuniorss</a> |
             Instagram: <a href="https://www.instagram.com/devjuniorss" target="_blank">Instagram</a>
-            </div>
+        </div>
         </p>
     </footer>
 
     <!-- <script src='../JavaScript/main.js'></script> -->
 </body>
+
 </html>
