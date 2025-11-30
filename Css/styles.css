@@ -138,42 +138,687 @@ h1 {
     margin-bottom: 2rem;
 }
 
-
-
-.projects{
-    padding: 1px;
+.skills{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
 }
 
-.my-projects {
-    padding: 6rem 2rem;
+.techs{
+    
 }
 
-.project-box {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    max-width: 1200px;
-}
-
-.project-card {
-    background: var(--brand-gray);
-    backdrop-filter: blur(10px);
-    border-radius: 20%;
-    border: 1px solid var(--glass-border);
+#frontend{
 
 }
 
-.project-title {}
+#backend{
 
-.img-project {
-    height: 200px;
+}
+
+#mobile{
+
+}
+
+#database{
+
+}
+
+#cloud{
+
+}
+
+#ia{
+
+}
+
+#process{
+
+}
+
+#frameworks{
+
+}
+
+#interest{
+
+}
+
+.languages{
+    padding-top: 6rem;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: radial-gradient(circle at 75% 30%), var(--brand-green), 0%, transparent 30%;
+}
+
+#level-box{
+
+}
+
+.level-paragraph{
+    font-size: 1.5rem;
+    color: var(--brand-gray-light);
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+#levels{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    padding: 0;
+    gap: 40px;
+}
+
+#levels li{
+    color: var(--brand-gray-light);
+    margin: 0;
+    padding: 0;
+}
+
+.languages-card { 
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; 
+    gap: 30px;
+    margin-top: 30px;
+    padding: 20px;
+    align-items: flex-start; 
     width: 100%;
-    object-fit: cover;
+}
+
+.language-alemao{
+    padding: 40px;
+    width: 500px;
+    border-radius: 20px;
+    background-color: var(--brand-gray);
+    box-shadow: 0 15px 20px #00000027 ;
 
 }
 
-.project-info {}
+#alemao-title{
+    font-style: italic;
+}
 
-.btn-project {
+.language-alemao ul{
+    list-style: none;
+}
+
+.language-alemao ul li{
+    margin: 20px 0;
+}
+
+.language-alemao .bars{
+    background-color: var(--brand-gray-dark);
+    display: block;
+    position: relative;
+    height: 20px;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: .5s ease-in-out;
+}
+
+.bars > span{
+    height: 20px;
+    background: linear-gradient(to right, #fe4701, #ff0054);
+    position: absolute;
+}
+
+.language-alemao h3{
+    color: var(--brand-gray-light);
+}
+
+.alemao-fala{
+     width: 10%;
+     animation: alemao-fala 3s;
+}
+
+.alemao-escuta{
+    width: 10%;
+    animation: alemao-escuta 3s;
+}
+
+.alemao-escrita{
+    width: 15%;
+    animation: alemao-escrita 3s;
+}
+
+.alemao-leitura{
+    width: 20%;
+    animation: alemao-leitura 3s;
+}
+
+/* pseudo js */
+/* inicio do alemao */
+
+@keyframes alemao-fala {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 10%;
+    }
+}
+
+@keyframes alemao-escuta {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 10%;
+    }
+}
+@keyframes alemao-escrita {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 15%;
+    }
+}
+@keyframes alemao-leitura {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 20%;
+    }
+}
+/* fim do alemão */
+/* inicio do english */
+.language-english{
+    padding: 40px;
+    width: 500px;
+    border-radius: 20px;
+    background-color: var(--brand-gray);
+    box-shadow: 0 15px 20px #00000027 ;
 
 }
+
+#english-title{
+    font-style: italic;
+}
+
+.language-english ul{
+    list-style: none;
+}
+
+.language-english ul li{
+    margin: 20px 0;
+}
+
+.language-english .bars{
+    background-color: var(--brand-gray-dark);
+    display: block;
+    position: relative;
+    height: 20px;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: .5s ease-in-out;
+}
+
+.bars > span{
+    height: 20px;
+    background: linear-gradient(to right, #fe4701, #ff0054);
+    position: absolute;
+}
+
+.language-english h3{
+    color: var(--brand-gray-light);
+}
+
+.english-fala{
+     width: 55%;
+     animation: english-fala 3s;
+}
+
+.english-escuta{
+    width: 80%;
+    animation: english-escuta 3s;
+}
+
+.english-escrita{
+    width: 70%;
+    animation: english-escrita 3s;
+}
+
+.english-leitura{
+    width: 100%;
+    animation: english-leitura 3s;
+}
+
+/* pseudo js */
+
+@keyframes english-fala {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 55%;
+    }
+}
+
+@keyframes english-escuta {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 80%;
+    }
+}
+@keyframes english-escrita {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 70%;
+    }
+}
+@keyframes english-leitura {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 100%;
+    }
+}
+/* fim do english */
+/* inicio do esapnhol */
+.language-espanhol{
+    padding: 40px;
+    width: 500px;
+    border-radius: 20px;
+    background-color: var(--brand-gray);
+    box-shadow: 0 15px 20px #00000027 ;
+
+}
+
+#espanhol-title{
+    font-style: italic;
+}
+
+.language-espanhol ul{
+    list-style: none;
+}
+
+.language-espanhol ul li{
+    margin: 20px 0;
+}
+
+.language-espanhol .bars{
+    background-color: var(--brand-gray-dark);
+    display: block;
+    position: relative;
+    height: 20px;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: .5s ease-in-out;
+}
+
+.bars > span{
+    height: 20px;
+    background: linear-gradient(to right, #fe4701, #ff0054);
+    position: absolute;
+}
+
+.language-espanhol h3{
+    color: var(--brand-gray-light);
+}
+
+.espanhol-fala{
+     width: 40%;
+     animation: espanhol-fala 3s;
+}
+
+.espanhol-escuta{
+    width: 80%;
+    animation: espanhol-escuta 3s;
+}
+
+.espanhol-escrita{
+    width: 60%;
+    animation: espanhol-escrita 3s;
+}
+
+.espanhol-leitura{
+    width: 80%;
+    animation: espanhol-leitura 3s;
+}
+
+/* pseudo js */
+
+@keyframes espanhol-fala {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 40%;
+    }
+}
+
+@keyframes espanhol-escuta {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 80%;
+    }
+}
+@keyframes espanhol-escrita {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 60%;
+    }
+}
+@keyframes espanhol-leitura {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 80%;
+    }
+}
+/* fim do espanhol */
+/* inicio do frances */
+.language-french{
+    padding: 40px;
+    width: 500px;
+    border-radius: 20px;
+    background-color: var(--brand-gray);
+    box-shadow: 0 15px 20px #00000027 ;
+
+}
+
+#french-title{
+    font-style: italic;
+}
+
+.language-french ul{
+    list-style: none;
+}
+
+.language-french ul li{
+    margin: 20px 0;
+}
+
+.language-french .bars{
+    background-color: var(--brand-gray-dark);
+    display: block;
+    position: relative;
+    height: 20px;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: .5s ease-in-out;
+}
+
+.bars > span{
+    height: 20px;
+    background: linear-gradient(to right, #fe4701, #ff0054);
+    position: absolute;
+}
+
+.language-french h3{
+    color: var(--brand-gray-light);
+}
+
+.french-fala{
+     width: 15%;
+     animation: french-fala 3s;
+}
+
+.french-escuta{
+    width: 20%;
+    animation: french-escuta 3s;
+}
+
+.french-escrita{
+    width: 15%;
+    animation: french-escrita 3s;
+}
+
+.french-leitura{
+    width: 25%;
+    animation: french-leitura 3s;
+}
+
+/* pseudo js */
+
+@keyframes french-fala {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 15%;
+    }
+}
+
+@keyframes french-escuta {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 20%;
+    }
+}
+@keyframes french-escrita {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 15%;
+    }
+}
+@keyframes french-leitura {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 25%;
+    }
+}
+/* fim do frances */
+/* inicio do italiano */
+.language-italian{
+    padding: 40px;
+    width: 500px;
+    border-radius: 20px;
+    background-color: var(--brand-gray);
+    box-shadow: 0 15px 20px #00000027 ;
+
+}
+
+#italian-title{
+    font-style: italic;
+}
+
+.language-italian ul{
+    list-style: none;
+}
+
+.language-italian ul li{
+    margin: 20px 0;
+}
+
+.language-italian .bars{
+    background-color: var(--brand-gray-dark);
+    display: block;
+    position: relative;
+    height: 20px;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: .5s ease-in-out;
+}
+
+.bars > span{
+    height: 20px;
+    background: linear-gradient(to right, #fe4701, #ff0054);
+    position: absolute;
+}
+
+.language-italian h3{
+    color: var(--brand-gray-light);
+}
+
+.italian-fala{
+     width: 10%;
+     animation: espanhol-fala 3s;
+}
+
+.italian-escuta{
+    width: 20%;
+    animation: espanhol-escuta 3s;
+}
+
+.italian-escrita{
+    width: 15%;
+    animation: espanhol-escrita 3s;
+}
+
+.italian-leitura{
+    width: 25%;
+    animation: espanhol-leitura 3s;
+}
+
+/* pseudo js */
+
+@keyframes italian-fala {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 10%;
+    }
+}
+
+@keyframes italian-escuta {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 20%;
+    }
+}
+@keyframes italian-escrita {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 15%;
+    }
+}
+@keyframes italian-leitura {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 25%;
+    }
+}
+/* fim do italiano */
+/* inicio do portuges */
+.language-portuguese{
+    padding: 40px;
+    width: 500px;
+    border-radius: 20px;
+    background-color: var(--brand-gray);
+    box-shadow: 0 15px 20px #00000027 ;
+
+}
+
+#portuguese-title{
+    font-style: italic;
+}
+
+.language-portuguese ul{
+    list-style: none;
+}
+
+.language-portuguese ul li{
+    margin: 20px 0;
+}
+
+.language-portuguese .bars{
+    background-color: var(--brand-gray-dark);
+    display: block;
+    position: relative;
+    height: 20px;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: .5s ease-in-out;
+}
+
+.bars > span{
+    height: 20px;
+    background: linear-gradient(to right, #fe4701, #ff0054);
+    position: absolute;
+}
+
+.language-portuguese h3{
+    color: var(--brand-gray-light);
+}
+
+.portuguese-fala{
+     width: 100%;
+     animation: espanhol-fala 3s;
+}
+
+.portuguese-escuta{
+    width: 100%;
+    animation: espanhol-escuta 3s;
+}
+
+.portuguese-escrita{
+    width: 100%;
+    animation: espanhol-escrita 3s;
+}
+
+.portuguese-leitura{
+    width: 100%;
+    animation: espanhol-leitura 3s;
+}
+
+/* pseudo js */
+
+@keyframes portuguese-fala {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 100%;
+    }
+}
+
+@keyframes portuguese-escuta {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 100%;
+    }
+}
+@keyframes portuguese-escrita {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 100%;
+    }
+}
+@keyframes portuguese-leitura {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 100%;
+    }
+}
+/* fim do portuges */

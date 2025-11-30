@@ -76,7 +76,7 @@
         <section id="techs" class="techs">
             <h2>Tecnologias</h2>
             <article>
-                <section id="frontend" class="frontend"> Front End</section>
+                <section id="frontend"> Front End</section>
                 <section id="backend"> Back End</section>
                 <section id="mobile"> Mobile</section>
                 <section id="database"> Banco de Dados</section>
@@ -88,59 +88,157 @@
             </article>
         </section>
         <section id="languages" class="languages">
-            <h2>Idiomas</h2>
-            <div>
-
-                <p>Classificando os níveis do idioma em 6 partes sendo elas respectivamente:</p>
-                <ul>
-                    <li>Iniciante</li>
-                    <li>Básico</li>
-                    <li>Intermediário</li>
-                    <li>Avançado</li>
-                    <li>Proeficiente</li>
-                    <li>Nativo</li>
+            <div id="level-box">
+                <h1>Idiomas</h1>
+                <p class="level-paragraph">Classificando os níveis do idioma em 6 partes sendo elas respectivamente:</p>
+                <ul id="levels">
+                    <li>
+                        <h2>Iniciante</h2>
+                    </li>
+                    <li>
+                        <h2>Básico</h2>
+                    </li>
+                    <li>
+                        <h2>Intermediário</h2>
+                    </li>
+                    <li>
+                        <h2>Avançado</h2>
+                    </li>
+                    <li>
+                        <h2>Proeficiente</h2>
+                    </li>
+                    <li>
+                        <h2>Nativo</h2>
+                    </li><li> </li>
                 </ul>
             </div>
-            <article>
-                <h3>Alemão</h3>
-                <!-- Iniciante -->
-                <li>Escrita</li>
-                <li>Escuta</li>
-                <li>Fala</li>
-                <li>Leitura</li>
-
-                <h3>Espanhol</h3>
-                <!-- basico -->
-                <li>Escrita</li>
-                <li>Escuta</li>
-                <li>Fala</li>
-                <li>Leitura</li>
-                <h3>Francês</h3>
-                <!-- Iniciante -->
-                <li>Escrita</li>
-                <li>Escuta</li>
-                <li>Fala</li>
-                <li>Leitura</li>
-
-                <h3>Inglês</h3>
-                <!-- Avançado -->
-                <li>Escrita</li>
-                <li>Escuta</li>
-                <li>Fala</li>
-                <li>Leitura</li>
-                <h3>Italiano</h3>
-                <!-- basico -->
-                <li>Escrita</li>
-                <li>Escuta</li>
-                <li>Fala</li>
-                <li>Leitura</li>
-                <h3>Português</p>
-                    <!-- nativo -->
-                    <li>Escrita</li>
-                    <li>Escuta</li>
-                    <li>Fala</li>
-                    <li>Leitura</li>
-                </h3>
+            <article class="languages-card">
+                <div class="language-alemao">
+                    <h1 id="alemao-title">Deutsch</h1>
+                    <ul>
+                        <li>
+                            <h3>Fala</h3>
+                            <span class="bars"><span class="alemao-fala"></span></span>
+                        </li>
+                        <li>
+                            <h3>Escuta</h3>
+                            <span class="bars"><span class="alemao-escuta"></span></span>
+                        </li>
+                        <li>
+                            <h3>Escrita</h3>
+                            <span class="bars"><span class="alemao-escrita"></span></span>
+                        </li>
+                        <li>
+                            <h3>Leitura</h3>
+                            <span class="bars"><span class="alemao-leitura"></span></span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="language-english">
+                    <h1 id="english-title">English</h1>
+                    <ul>
+                        <li>
+                            <h3>Fala</h3>
+                            <span class="bars"><span class="english-fala"></span></span>
+                        </li>
+                        <li>
+                            <h3>Escuta</h3>
+                            <span class="bars"><span class="english-escuta"></span></span>
+                        </li>
+                        <li>
+                            <h3>Escrita</h3>
+                            <span class="bars"><span class="english-escrita"></span></span>
+                        </li>
+                        <li>
+                            <h3>Leitura</h3>
+                            <span class="bars"><span class="english-leitura"></span></span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="language-espanhol">
+                    <h1 id="espanhol-title">Español</h1>
+                    <ul>
+                        <li>
+                            <h3>Fala</h3>
+                            <span class="bars"><span class="espanhol-fala"></span></span>
+                        </li>
+                        <li>
+                            <h3>Escuta</h3>
+                            <span class="bars"><span class="espanhol-escuta"></span></span>
+                        </li>
+                        <li>
+                            <h3>Escrita</h3>
+                            <span class="bars"><span class="espanhol-escrita"></span></span>
+                        </li>
+                        <li>
+                            <h3>Leitura</h3>
+                            <span class="bars"><span class="espanhol-leitura"></span></span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="language-french">
+                    <h1 id="french-title">Français</h1>
+                    <ul>
+                        <li>
+                            <h3>Fala</h3>
+                            <span class="bars"><span class="french-fala"></span></span>
+                        </li>
+                        <li>
+                            <h3>Escuta</h3>
+                            <span class="bars"><span class="french-escuta"></span></span>
+                        </li>
+                        <li>
+                            <h3>Escrita</h3>
+                            <span class="bars"><span class="french-escrita"></span></span>
+                        </li>
+                        <li>
+                            <h3>Leitura</h3>
+                            <span class="bars"><span class="french-leitura"></span></span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="language-italian">
+                    <h1 id="italiam-title">Italiano</h1>
+                    <ul>
+                        <li>
+                            <h3>Fala</h3>
+                            <span class="bars"><span class="italian-fala"></span></span>
+                        </li>
+                        <li>
+                            <h3>Escuta</h3>
+                            <span class="bars"><span class="italian-escuta"></span></span>
+                        </li>
+                        <li>
+                            <h3>Escrita</h3>
+                            <span class="bars"><span class="italian-escrita"></span></span>
+                        </li>
+                        <li>
+                            <h3>Leitura</h3>
+                            <span class="bars"><span class="italian-leitura"></span></span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="language-portuguese">
+                    <h1 id="portuguese-title">Portugues</h1>
+                    <ul>
+                        <li>
+                            <h3>Fala</h3>
+                            <span class="bars"><span class="portuguese-fala"></span></span>
+                        </li>
+                        <li>
+                            <h3>Escuta</h3>
+                            <span class="bars"><span class="portuguese-escuta"></span></span>
+                        </li>
+                        <li>
+                            <h3>Escrita</h3>
+                            <span class="bars"><span class="portuguese-escrita"></span></span>
+                        </li>
+                        <li>
+                            <h3>Leitura</h3>
+                            <span class="bars"><span class="portuguese-leitura"></span></span>
+                        </li>
+                    </ul>
+                </div>
             </article>
         </section>
         <section id="projects" class="projects">
@@ -148,7 +246,8 @@
             <div class="projects-box">
                 <article class="project-card" data-tipo="projeto-pessoal">
                     <h3 class="project-title">Harmony Aesthetics Zentrum</h3>
-                    <img src="../images/loja.png" alt="imagem do projeto da clinica de estetica" class="img-project">
+                    <img src="../images/logoHarmony.png" alt="imagem do projeto da clinica de estetica"
+                        class="img-project">
                     <p class="project-info">
                         Projeto Web feito para atualizar web site de da Clínica de Estetica, clinica localizada em
                         Luzern -
@@ -173,8 +272,8 @@
                     </p>
                 </article>
                 <article class="project-card" data-tipo="projeto-pessoal">
-                    <h3 class="project-title">FindMe</h3>
-                    <img src="../images/loja.png" alt="imagem do projeto Findme" class="img-project">
+                    <h3 class="project-title">Consultorio Siqueira</h3>
+                    <img src="../images/logoClinicaSiqueira.jpeg" alt="imagem do projeto Findme" class="img-project">
                     <p class="project-info">
                         Projeto Mobile para agilizar e facilitar as marcações de consulta com a psipedagoga e os pais
                         das
@@ -184,8 +283,9 @@
                     </p>
                 </article>
                 <article class="project-card" data-tipo="projeto-pessoal">
-                    <h3 class="project-title">Siqueira Construção</h3>
-                    <img src="../images/loja.png" alt="imagem do projeto Siqueira Construção" class="img-project">
+                    <h3 class="project-title">Deposito Siqueira</h3>
+                    <img src="../images/logoDepositoSiqueira.png" alt="imagem do projeto Siqueira Construção"
+                        class="img-project">
                     <p class="project-info">
                         Projeto Web para vendas de material de construção e controle de estoque da empresa.
                         <a href="https://github.com/DevJuniorss/DepositoSiqueira" target="_blank"
@@ -204,7 +304,7 @@
                 </article>
                 <article class="project-card" data-tipo="projeto-pessoal">
                     <h3 class="project-title">MazeRunner</h3>
-                    <img src="../images/loja.png" alt="imagem do projeto Kerosene Store." class="img-project">
+                    <img src="../images/logoMaze.png" alt="imagem do projeto Kerosene Store." class="img-project">
                     <p class="project-info">
                         Pequeno jogo usando alguns algoritmos de busca.
                         <a href="https://github.com/DevJuniorss/MazeRunner" target="_blank" class="btn-projeto">Ver
@@ -298,7 +398,7 @@
         </div>
         </p>
     </footer>
-
+    
     <!-- <script src='../JavaScript/main.js'></script> -->
 </body>
 
