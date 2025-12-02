@@ -40,6 +40,20 @@ body {
     background-color: var(--brand-dark);
 }
 
+.particulas {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.5;
+    background:
+        radial-gradient(circle at 10% 20%, var(--brand-gray-light) 0%, transparent 20%),
+        radial-gradient(circle at 90% 80%, var(--brand-green) 0%, transparent 20%),
+        var(--brand-dark);
+}
+
 .nav-bar {
     top: 0;
     position: fixed;
@@ -822,3 +836,60 @@ h1 {
     }
 }
 /* fim do portuges */
+
+
+.projects{
+    padding: 6rem  2rem;
+}
+
+.projects-title{
+     text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+}
+
+.projects-box{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.project-card{
+    background-color: var(--brand-gray);
+    border-radius: 16px;
+    backdrop-filter: blur(5px);
+    border: 1px solid;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    cursor: pointer;
+
+}
+
+.project-card:hover{
+    box-shadow: 0 10px 20px rgba(79, 70, 229, 0.2);
+    transform: translateY(-10px) scale(1.1);
+
+}
+
+.img-project{
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+
+}
+
+.project-info{
+    pad: 1.5rem;
+}
+
+.project-name{
+    margin-bottom: 5px; 
+    color: var(--brand-gray-light);
+}
+
+.project-paragraph{
+    color: var(--brand-gray-light);
+    line-height: 1.25rem;
+}
