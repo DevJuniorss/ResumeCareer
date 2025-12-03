@@ -1,3 +1,4 @@
+/* Default configs start*/
 * {
     margin: 0;
     padding: 0;
@@ -9,40 +10,35 @@ html {
     scroll-behavior: smooth;
 }
 
-/* Paleta da marca */
 :root {
-    /* Marca */
     --brand-dark: #1F2A33;
-    /* texto OBLIVIUM */
     --brand-gray-dark: #2B2B2B;
-    /* espiral - parte mais escura */
     --brand-gray: #6D6D6D;
-    /* espiral média */
     --brand-gray-light: #E5E5E5;
-    /* espiral clara */
     --brand-green: #69C276;
-    /* pixels verdes principal */
     --brand-green-light: #A6E3A1;
-    /* pixels verdes claros */
 
-    /* Complementares */
     --background: #FFFFFF;
     --background-soft: #F5F6F7;
     --text-dark: #1F2A33;
     --text-light: #6D6D6D;
 
-    /* Glass effect */
     --glass: rgba(255, 255, 255, 0.1);
     --glass-border: rgba(255, 255, 255, 0.25);
 }
+/* Default configs start*/
 
+/* page start */
 body {
     background-color: var(--brand-dark);
+    width: 100%;
+    max-width: ;
+    height: 100vh;
 }
 
 .particulas {
     position: fixed;
-    top: 10;
+    top: 0;
     right: 0;
     width: 100%;
     height: 100%;
@@ -52,23 +48,54 @@ body {
         radial-gradient(circle at 90% 80%, var(--brand-gray-light) 0%, transparent 20%),
         radial-gradient(circle at 10% 20%, var(--brand-green) 0%, transparent 20%),
         var(--brand-dark);
+    /* colocar como um bat sinal, alterar a cor para verde com o simbolo de $ em dourado */
+    /* mover uma para topo na direita, e a outra no bottom a esquerda */
+    /* a da parte inferior alterar para uma seta zig-zag crescente até o bat sinal */
 }
 
-.nav-bar {
-    top: 0;
+header{
+    padding: 0;
+}
+
+header .interface{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.nav-bar  {
     position: fixed;
-    background-color: var(--brand-gray-dark);
-    /* baseado no brand-dark */
+    top: 0;
+    padding: 16px;
     width: 100%;
     z-index: 100;
-    padding: 1.5rem;
-}
-
-.menu {
     display: flex;
     justify-content: center;
+    flex-direction: row;
+    background-color: var(--brand-gray-dark);
+    padding: 1rem 2rem; 
+}
+
+/* corrijir importe de fontawesome*/
+#theme{
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: cornflowerblue;
+    border-radius: 35px;
+    cursor: pointer;
+
+} 
+
+.menu {
     list-style: none;
+    display: flex;
+    flex-direction: row;
     gap: 3rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* adicionar js para usabiliadade e organizar a tela */
 }
 
 .menu-link {
@@ -115,9 +142,9 @@ body {
     width: 350px;
     height: 350px;
     border-radius: 25%;
-    box-shadow: 10px 10px 15px 0px rgba(130,137,168,0.7);
-    -webkit-box-shadow: 10px 10px 15px 0px rgba(130,137,168,0.7);
-    -moz-box-shadow: 10px 10px 15px 0px rgba(130,137,168,0.7);
+    box-shadow: 10px 10px 15px 0px rgba(130, 137, 168, 0.7);
+    -webkit-box-shadow: 10px 10px 15px 0px rgba(130, 137, 168, 0.7);
+    -moz-box-shadow: 10px 10px 15px 0px rgba(130, 137, 168, 0.7);
     border: 4px solid var(--brand-green);
     animation: float 3s ease-in-out infinite;
     filter: grayscale(0.2) contrast(1.1);
@@ -154,55 +181,42 @@ h1 {
     margin-bottom: 2rem;
 }
 
-.skills{
-    list-style: none;
+.skills {
     display: flex;
     justify-content: center;
-    gap: 1.5rem;
+    align-items: center;
+    flex-direction: column;
     flex-wrap: wrap;
+    gap: 1.5rem;
 }
 
-.techs{
-    
-}
-
-#frontend{
-
-}
-
-#backend{
+.techs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 
 }
 
-#mobile{
+#frontend {}
 
-}
+#backend {}
 
-#database{
+#mobile {}
 
-}
+#database {}
 
-#cloud{
+#cloud {}
 
-}
+#ia {}
 
-#ia{
+#process {}
 
-}
+#frameworks {}
 
-#process{
+#interest {}
 
-}
-
-#frameworks{
-
-}
-
-#interest{
-
-}
-
-.languages{
+.languages {
     padding-top: 6rem;
     min-height: 100vh;
     display: flex;
@@ -212,11 +226,14 @@ h1 {
     background: radial-gradient(circle at 75% 30%), var(--brand-green), 0%, transparent 30%;
 }
 
-#level-box{
-
+#level-box .level-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
-.level-paragraph{
+.level-paragraph {
     font-size: 1.5rem;
     color: var(--brand-gray-light);
     text-align: center;
@@ -224,7 +241,7 @@ h1 {
     margin-bottom: 2rem;
 }
 
-#levels{
+#levels {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -233,45 +250,45 @@ h1 {
     gap: 40px;
 }
 
-#levels li{
+#levels li {
     color: var(--brand-gray-light);
     margin: 0;
     padding: 0;
 }
 
-.languages-card { 
+.languages-card {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
     gap: 30px;
     margin-top: 30px;
     padding: 20px;
-    align-items: flex-start; 
+    align-items: flex-start;
     width: 100%;
 }
 
-.language-alemao{
+.language-alemao {
     padding: 40px;
     width: 500px;
     border-radius: 20px;
     background-color: var(--brand-gray);
-    box-shadow: 0 15px 20px #00000027 ;
+    box-shadow: 0 15px 20px #00000027;
 
 }
 
-#alemao-title{
+#alemao-title {
     font-style: italic;
 }
 
-.language-alemao ul{
+.language-alemao ul {
     list-style: none;
 }
 
-.language-alemao ul li{
+.language-alemao ul li {
     margin: 20px 0;
 }
 
-.language-alemao .bars{
+.language-alemao .bars {
     background-color: var(--brand-gray-dark);
     display: block;
     position: relative;
@@ -281,32 +298,32 @@ h1 {
     transition: .5s ease-in-out;
 }
 
-.bars > span{
+.bars>span {
     height: 20px;
     background: linear-gradient(to right, #fe4701, #ff0054);
     position: absolute;
 }
 
-.language-alemao h3{
+.language-alemao h3 {
     color: var(--brand-gray-light);
 }
 
-.alemao-fala{
-     width: 10%;
-     animation: alemao-fala 3s;
+.alemao-fala {
+    width: 10%;
+    animation: alemao-fala 3s;
 }
 
-.alemao-escuta{
+.alemao-escuta {
     width: 10%;
     animation: alemao-escuta 3s;
 }
 
-.alemao-escrita{
+.alemao-escrita {
     width: 15%;
     animation: alemao-escrita 3s;
 }
 
-.alemao-leitura{
+.alemao-leitura {
     width: 20%;
     animation: alemao-leitura 3s;
 }
@@ -315,62 +332,69 @@ h1 {
 /* inicio do alemao */
 
 @keyframes alemao-fala {
-    0%{
+    0% {
         width: 0%;
     }
-    100%{
+
+    100% {
         width: 10%;
     }
 }
 
 @keyframes alemao-escuta {
-    0%{
+    0% {
         width: 0%;
     }
-    100%{
+
+    100% {
         width: 10%;
     }
 }
+
 @keyframes alemao-escrita {
-    0%{
+    0% {
         width: 0%;
     }
-    100%{
+
+    100% {
         width: 15%;
     }
 }
+
 @keyframes alemao-leitura {
-    0%{
+    0% {
         width: 0%;
     }
-    100%{
+
+    100% {
         width: 20%;
     }
 }
+
 /* fim do alemão */
 /* inicio do english */
-.language-english{
+.language-english {
     padding: 40px;
     width: 500px;
     border-radius: 20px;
     background-color: var(--brand-gray);
-    box-shadow: 0 15px 20px #00000027 ;
+    box-shadow: 0 15px 20px #00000027;
 
 }
 
-#english-title{
+#english-title {
     font-style: italic;
 }
 
-.language-english ul{
+.language-english ul {
     list-style: none;
 }
 
-.language-english ul li{
+.language-english ul li {
     margin: 20px 0;
 }
 
-.language-english .bars{
+.language-english .bars {
     background-color: var(--brand-gray-dark);
     display: block;
     position: relative;
@@ -380,32 +404,32 @@ h1 {
     transition: .5s ease-in-out;
 }
 
-.bars > span{
+.bars>span {
     height: 20px;
     background: linear-gradient(to right, #fe4701, #ff0054);
     position: absolute;
 }
 
-.language-english h3{
+.language-english h3 {
     color: var(--brand-gray-light);
 }
 
-.english-fala{
-     width: 55%;
-     animation: english-fala 3s;
+.english-fala {
+    width: 55%;
+    animation: english-fala 3s;
 }
 
-.english-escuta{
+.english-escuta {
     width: 80%;
     animation: english-escuta 3s;
 }
 
-.english-escrita{
+.english-escrita {
     width: 70%;
     animation: english-escrita 3s;
 }
 
-.english-leitura{
+.english-leitura {
     width: 100%;
     animation: english-leitura 3s;
 }
@@ -413,62 +437,69 @@ h1 {
 /* pseudo js */
 
 @keyframes english-fala {
-    0%{
+    0% {
         width: 0%;
     }
-    100%{
+
+    100% {
         width: 55%;
     }
 }
 
 @keyframes english-escuta {
-    0%{
+    0% {
         width: 0%;
     }
-    100%{
+
+    100% {
         width: 80%;
     }
 }
+
 @keyframes english-escrita {
-    0%{
+    0% {
         width: 0%;
     }
-    100%{
+
+    100% {
         width: 70%;
     }
 }
+
 @keyframes english-leitura {
-    0%{
+    0% {
         width: 0%;
     }
-    100%{
+
+    100% {
         width: 100%;
     }
 }
+
 /* fim do english */
 /* inicio do esapnhol */
-.language-espanhol{
+.language-espanhol {
     padding: 40px;
     width: 500px;
     border-radius: 20px;
     background-color: var(--brand-gray);
-    box-shadow: 0 15px 20px #00000027 ;
+    box-shadow: 0 15px 20px #00000027;
 
 }
 
-#espanhol-title{
+#espanhol-title {
     font-style: italic;
 }
 
-.language-espanhol ul{
+.language-espanhol ul {
     list-style: none;
 }
 
-.language-espanhol ul li{
+.language-espanhol ul li {
     margin: 20px 0;
 }
 
-.language-espanhol .bars{
+.language-espanhol .bars {
     background-color: var(--brand-gray-dark);
     display: block;
     position: relative;
@@ -478,32 +509,32 @@ h1 {
     transition: .5s ease-in-out;
 }
 
-.bars > span{
+.bars>span {
     height: 20px;
     background: linear-gradient(to right, #fe4701, #ff0054);
     position: absolute;
 }
 
-.language-espanhol h3{
+.language-espanhol h3 {
     color: var(--brand-gray-light);
 }
 
-.espanhol-fala{
-     width: 40%;
-     animation: espanhol-fala 3s;
+.espanhol-fala {
+    width: 40%;
+    animation: espanhol-fala 3s;
 }
 
-.espanhol-escuta{
+.espanhol-escuta {
     width: 80%;
     animation: espanhol-escuta 3s;
 }
 
-.espanhol-escrita{
+.espanhol-escrita {
     width: 60%;
     animation: espanhol-escrita 3s;
 }
 
-.espanhol-leitura{
+.espanhol-leitura {
     width: 80%;
     animation: espanhol-leitura 3s;
 }
@@ -511,62 +542,69 @@ h1 {
 /* pseudo js */
 
 @keyframes espanhol-fala {
-    0%{
+    0% {
         width: 0%;
     }
-    100%{
+
+    100% {
         width: 40%;
     }
 }
 
 @keyframes espanhol-escuta {
-    0%{
+    0% {
         width: 0%;
     }
-    100%{
+
+    100% {
         width: 80%;
     }
 }
+
 @keyframes espanhol-escrita {
-    0%{
+    0% {
         width: 0%;
     }
-    100%{
+
+    100% {
         width: 60%;
     }
 }
+
 @keyframes espanhol-leitura {
-    0%{
+    0% {
         width: 0%;
     }
-    100%{
+
+    100% {
         width: 80%;
     }
 }
+
 /* fim do espanhol */
 /* inicio do frances */
-.language-french{
+.language-french {
     padding: 40px;
     width: 500px;
     border-radius: 20px;
     background-color: var(--brand-gray);
-    box-shadow: 0 15px 20px #00000027 ;
+    box-shadow: 0 15px 20px #00000027;
 
 }
 
-#french-title{
+#french-title {
     font-style: italic;
 }
 
-.language-french ul{
+.language-french ul {
     list-style: none;
 }
 
-.language-french ul li{
+.language-french ul li {
     margin: 20px 0;
 }
 
-.language-french .bars{
+.language-french .bars {
     background-color: var(--brand-gray-dark);
     display: block;
     position: relative;
@@ -576,32 +614,32 @@ h1 {
     transition: .5s ease-in-out;
 }
 
-.bars > span{
+.bars>span {
     height: 20px;
     background: linear-gradient(to right, #fe4701, #ff0054);
     position: absolute;
 }
 
-.language-french h3{
+.language-french h3 {
     color: var(--brand-gray-light);
 }
 
-.french-fala{
-     width: 15%;
-     animation: french-fala 3s;
+.french-fala {
+    width: 15%;
+    animation: french-fala 3s;
 }
 
-.french-escuta{
+.french-escuta {
     width: 20%;
     animation: french-escuta 3s;
 }
 
-.french-escrita{
+.french-escrita {
     width: 15%;
     animation: french-escrita 3s;
 }
 
-.french-leitura{
+.french-leitura {
     width: 25%;
     animation: french-leitura 3s;
 }
@@ -609,62 +647,69 @@ h1 {
 /* pseudo js */
 
 @keyframes french-fala {
-    0%{
+    0% {
         width: 0%;
     }
-    100%{
+
+    100% {
         width: 15%;
     }
 }
 
 @keyframes french-escuta {
-    0%{
+    0% {
         width: 0%;
     }
-    100%{
+
+    100% {
         width: 20%;
     }
 }
+
 @keyframes french-escrita {
-    0%{
+    0% {
         width: 0%;
     }
-    100%{
+
+    100% {
         width: 15%;
     }
 }
+
 @keyframes french-leitura {
-    0%{
+    0% {
         width: 0%;
     }
-    100%{
+
+    100% {
         width: 25%;
     }
 }
+
 /* fim do frances */
 /* inicio do italiano */
-.language-italian{
+.language-italian {
     padding: 40px;
     width: 500px;
     border-radius: 20px;
     background-color: var(--brand-gray);
-    box-shadow: 0 15px 20px #00000027 ;
+    box-shadow: 0 15px 20px #00000027;
 
 }
 
-#italian-title{
+#italian-title {
     font-style: italic;
 }
 
-.language-italian ul{
+.language-italian ul {
     list-style: none;
 }
 
-.language-italian ul li{
+.language-italian ul li {
     margin: 20px 0;
 }
 
-.language-italian .bars{
+.language-italian .bars {
     background-color: var(--brand-gray-dark);
     display: block;
     position: relative;
@@ -674,32 +719,32 @@ h1 {
     transition: .5s ease-in-out;
 }
 
-.bars > span{
+.bars>span {
     height: 20px;
     background: linear-gradient(to right, #fe4701, #ff0054);
     position: absolute;
 }
 
-.language-italian h3{
+.language-italian h3 {
     color: var(--brand-gray-light);
 }
 
-.italian-fala{
-     width: 10%;
-     animation: espanhol-fala 3s;
+.italian-fala {
+    width: 10%;
+    animation: espanhol-fala 3s;
 }
 
-.italian-escuta{
+.italian-escuta {
     width: 20%;
     animation: espanhol-escuta 3s;
 }
 
-.italian-escrita{
+.italian-escrita {
     width: 15%;
     animation: espanhol-escrita 3s;
 }
 
-.italian-leitura{
+.italian-leitura {
     width: 25%;
     animation: espanhol-leitura 3s;
 }
@@ -707,62 +752,69 @@ h1 {
 /* pseudo js */
 
 @keyframes italian-fala {
-    0%{
+    0% {
         width: 0%;
     }
-    100%{
+
+    100% {
         width: 10%;
     }
 }
 
 @keyframes italian-escuta {
-    0%{
+    0% {
         width: 0%;
     }
-    100%{
+
+    100% {
         width: 20%;
     }
 }
+
 @keyframes italian-escrita {
-    0%{
+    0% {
         width: 0%;
     }
-    100%{
+
+    100% {
         width: 15%;
     }
 }
+
 @keyframes italian-leitura {
-    0%{
+    0% {
         width: 0%;
     }
-    100%{
+
+    100% {
         width: 25%;
     }
 }
+
 /* fim do italiano */
 /* inicio do portuges */
-.language-portuguese{
+.language-portuguese {
     padding: 40px;
     width: 500px;
     border-radius: 20px;
     background-color: var(--brand-gray);
-    box-shadow: 0 15px 20px #00000027 ;
+    box-shadow: 0 15px 20px #00000027;
 
 }
 
-#portuguese-title{
+#portuguese-title {
     font-style: italic;
 }
 
-.language-portuguese ul{
+.language-portuguese ul {
     list-style: none;
 }
 
-.language-portuguese ul li{
+.language-portuguese ul li {
     margin: 20px 0;
 }
 
-.language-portuguese .bars{
+.language-portuguese .bars {
     background-color: var(--brand-gray-dark);
     display: block;
     position: relative;
@@ -772,32 +824,32 @@ h1 {
     transition: .5s ease-in-out;
 }
 
-.bars > span{
+.bars>span {
     height: 20px;
     background: linear-gradient(to right, #fe4701, #ff0054);
     position: absolute;
 }
 
-.language-portuguese h3{
+.language-portuguese h3 {
     color: var(--brand-gray-light);
 }
 
-.portuguese-fala{
-     width: 100%;
-     animation: espanhol-fala 3s;
+.portuguese-fala {
+    width: 100%;
+    animation: espanhol-fala 3s;
 }
 
-.portuguese-escuta{
+.portuguese-escuta {
     width: 100%;
     animation: espanhol-escuta 3s;
 }
 
-.portuguese-escrita{
+.portuguese-escrita {
     width: 100%;
     animation: espanhol-escrita 3s;
 }
 
-.portuguese-leitura{
+.portuguese-leitura {
     width: 100%;
     animation: espanhol-leitura 3s;
 }
@@ -805,52 +857,59 @@ h1 {
 /* pseudo js */
 
 @keyframes portuguese-fala {
-    0%{
+    0% {
         width: 0%;
     }
-    100%{
+
+    100% {
         width: 100%;
     }
 }
 
 @keyframes portuguese-escuta {
-    0%{
+    0% {
         width: 0%;
     }
-    100%{
+
+    100% {
         width: 100%;
     }
 }
+
 @keyframes portuguese-escrita {
-    0%{
+    0% {
         width: 0%;
     }
-    100%{
+
+    100% {
         width: 100%;
     }
 }
+
 @keyframes portuguese-leitura {
-    0%{
+    0% {
         width: 0%;
     }
-    100%{
+
+    100% {
         width: 100%;
     }
 }
+
 /* fim do portuges */
 
 
-.projects{
-    padding: 6rem  2rem;
+.projects {
+    padding: 6rem 2rem;
 }
 
-.projects-title{
-     text-align: center;
+.projects-title {
+    text-align: center;
     font-size: 2.5rem;
     margin-bottom: 50px;
 }
 
-.projects-box{
+.projects-box {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
@@ -858,7 +917,7 @@ h1 {
     margin: 0 auto;
 }
 
-.project-card{
+.project-card {
     background-color: var(--brand-gray);
     border-radius: 16px;
     backdrop-filter: blur(5px);
@@ -869,34 +928,34 @@ h1 {
 
 }
 
-.project-card:hover{
+.project-card:hover {
     box-shadow: 0 10px 20px rgba(79, 70, 229, 0.2);
     transform: translateY(-10px) scale(1.1);
 
 }
 
-.img-project{
+.img-project {
     height: 200px;
     width: 100%;
     object-fit: cover;
 
 }
 
-.project-info{
+.project-info {
     pad: 1.5rem;
 }
 
-.project-name{
-    margin-bottom: 5px; 
+.project-name {
+    margin-bottom: 5px;
     color: var(--brand-gray-light);
 }
 
-.project-paragraph{
+.project-paragraph {
     color: var(--brand-gray-light);
     line-height: 1.25rem;
 }
 
-body > footer{
+body>footer {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -906,11 +965,11 @@ body > footer{
     background-color: var(--brand-gray);
 }
 
-footer:last-of-type{
+footer:last-of-type {
     margin-top: 40px;
 }
 
-footer p{
+footer p {
     color: var(--brand-gray-light);
 }
 
@@ -919,7 +978,7 @@ footer p{
     gap: 10px;
 }
 
-.social img{
+.social img {
     width: 24px;
     height: 24px;
     display: flex;
@@ -928,6 +987,6 @@ footer p{
     transition: 0.3s ease-in;
 }
 
-.social a:hover img{
+.social a:hover img {
     transform: scale(1.1);
 }

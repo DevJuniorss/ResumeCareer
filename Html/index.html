@@ -8,34 +8,39 @@
     <title>Junior SS</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='../Css/styles.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWmL2IXYH1R9Lx6B1YQ1e1N9t+WmD6XJQanYd2VJQz7rj0J9Kf3wR4pQ9P1+O7x1Y6d9dw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
-
     <div class="particulas"></div>
+    <header>
+        <div class="interface">
+            <!-- quando lançar o site da empresa lembrar de atualizar aqui. -->
+            <!-- <h1 class="oblivium">Oblivium Solution</h1>
+            <img src="" alt="logo Oblivium Solutions"> -->
 
-    <!-- inserir futuramente quando expandir mais o portifolio
-     <header class="topo">
-        <h1 class="titulo-site">Dev Juniorss</h1>
-        implementar tema claro e escuro
-    </header> -->
-
-    <nav class="nav-bar">
-        <ul class="menu">
-            <li><a href="#intro" class="menu-link">E aí tudo bem?</a></li>
-            <li><a href="#skills" class="menu-link">Skills</a></li>
-            <li><a href="#techs" class="menu-link">Tecnologias</a></li>
-            <li><a href="#languages" class="menu-link">Idiomas</a></li>
-            <li><a href="#projects" class="menu-link">Projetos</a></li>
-            <li><a href="#exp" class="menu-link">Experiencias</a></li>
-            <li><a href="#diplomas" class="menu-link">Diplomas</a></li>
-            <li><a href="#contato" class="menu-link">Contato</a></li>
-        </ul>
-    </nav>
-
+            <nav class="nav-bar">
+                <ul class="menu">
+                    <li><a href="#intro" class="menu-link">E aí tudo bem?</a></li>
+                    <li><a href="#skills" class="menu-link">Skills</a></li>
+                    <li><a href="#techs" class="menu-link">Tecnologias</a></li>
+                    <li><a href="#languages" class="menu-link">Idiomas</a></li>
+                    <li><a href="#projects" class="menu-link">Projetos</a></li>
+                    <li><a href="#exp" class="menu-link">Experiencias</a></li>
+                    <li><a href="#diplomas" class="menu-link">Diplomas</a></li>
+                    <li><a href="#contato" class="menu-link">Contato</a></li>
+                    <!-- corrijir import do fontawesome -->
+                     <button id="theme" type="button">
+                         <i class="fa-solid fa-moon">*</i>
+                     </button> 
+                </ul>
+            </nav>
+        </div>
+    </header>
     <main>
         <section id="intro" class="intro">
-            <!-- <h2>Inicio</h2> -->
             <article class="perfil" data-tipo="img-perfil">
                 <img src="../images/profile.png" alt="foto de perfil junior" class="foto-perfil">
                 <h1>Alexandre Júnior</h1>
@@ -45,12 +50,12 @@
                         Meu nome é Alexandre Júnior e sou desenvolvedor e estudante de engenharia de software.
                         Ofereço soluções web e mobile como serviços freelancer além de consultoria em alguns casos.
                         Tenho interesse em gerencia de projetos, cyber segurança e IA.
+                        Chamei sua atenção? Olha minhas competências com mais calma
+                        Quer conversar mais sobre?
                     </p>
-                    <p class="intro-paragraph">
-                        Chamei sua atenção? Olha minhas competências com mais calma <a href="#skills">aqui!</a><br>
-                        <!-- download cv -->
-                        <a href="#contato">Quer conversar mais sobre?</a>
-                    </p>
+                    <button id="download-cv">Downalod CV</button>
+                    <button id="#skills">Competencias</button>
+                    <button id="#contato">Contato</button>
                 </div>
             </article>
         </section>
@@ -78,42 +83,159 @@
         <section id="techs" class="techs">
             <h2>Tecnologias</h2>
             <article>
-                <section id="frontend"> Front End</section>
-                <section id="backend"> Back End</section>
-                <section id="mobile"> Mobile</section>
-                <section id="database"> Banco de Dados</section>
-                <section id="cloud"> Cloud</section>
-                <section id="ia"> IA</section>
-                <section id="process"> Software Engenire</section>
-                <section id="frameworks"> Frameworks & Libraries</section>
-                <section id="interest"> Interesses </section>
+                <section id="#frontend"> Front End</section>
+                <section id="#backend"> Back End</section>
+                <section id="#mobile"> Mobile</section>
+                <section id="#database"> Banco de Dados</section>
+                <section id="#cloud"> Cloud</section>
+                <section id="#inteligenci-artificial"> IA</section>
+                <section id="#process"> Software Engenire</section>
+                <section id="#frameworks"> Frameworks & Libraries</section>
+                <section id="#interest"> Interesses </section>
+
+                <!-- tabelas de skill em tech feitas com span de baixo pra cima -->
+                <div class="frontend">
+                    <ul>
+                        <li>
+                            <h3>HTML5</h3>
+                            <span class="bars"><span class="frontend-skill"></span></span>
+                        </li>
+                        <li>
+                            <h3>CSS3</h3>
+                            <span class="bars"><span class="frontend-skill"></span></span>
+                        </li>
+                        <li>
+                            <h3>Escrita</h3>
+                            <span class="bars"><span class="frontend-skill"></span></span>
+                        </li>
+                        <li>
+                            <h3>Leitura</h3>
+                            <span class="bars"><span class="alemao-leitura"></span></span>
+                        </li>
+                        <li>
+                            <h3>HTML5</h3>
+                            <span class="bars"><span class="alemao-fala"></span></span>
+                        </li>
+                        <li>
+                            <h3>Escuta</h3>
+                            <span class="bars"><span class="alemao-escuta"></span></span>
+                        </li>
+                        <li>
+                            <h3>Escrita</h3>
+                            <span class="bars"><span class="alemao-escrita"></span></span>
+                        </li>
+                        <li>
+                            <h3>Leitura</h3>
+                            <span class="bars"><span class="alemao-leitura"></span></span>
+                        </li>
+                        <li>
+                            <h3>HTML5</h3>
+                            <span class="bars"><span class="alemao-fala"></span></span>
+                        </li>
+                        <li>
+                            <h3>Escuta</h3>
+                            <span class="bars"><span class="alemao-escuta"></span></span>
+                        </li>
+                        <li>
+                            <h3>Escrita</h3>
+                            <span class="bars"><span class="alemao-escrita"></span></span>
+                        </li>
+                        <li>
+                            <h3>Leitura</h3>
+                            <span class="bars"><span class="alemao-leitura"></span></span>
+                        </li>
+                        <li>
+                            <h3>HTML5</h3>
+                            <span class="bars"><span class="alemao-fala"></span></span>
+                        </li>
+                        <li>
+                            <h3>Escuta</h3>
+                            <span class="bars"><span class="alemao-escuta"></span></span>
+                        </li>
+                        <li>
+                            <h3>Escrita</h3>
+                            <span class="bars"><span class="alemao-escrita"></span></span>
+                        </li>
+                        <li>
+                            <h3>Leitura</h3>
+                            <span class="bars"><span class="alemao-leitura"></span></span>
+                        </li>
+                        <li>
+                            <h3>HTML5</h3>
+                            <span class="bars"><span class="alemao-fala"></span></span>
+                        </li>
+                        <li>
+                            <h3>Escuta</h3>
+                            <span class="bars"><span class="alemao-escuta"></span></span>
+                        </li>
+                        <li>
+                            <h3>Escrita</h3>
+                            <span class="bars"><span class="alemao-escrita"></span></span>
+                        </li>
+                        <li>
+                            <h3>Leitura</h3>
+                            <span class="bars"><span class="alemao-leitura"></span></span>
+                        </li>
+                        <li>
+                            <h3>HTML5</h3>
+                            <span class="bars"><span class="alemao-fala"></span></span>
+                        </li>
+                        <li>
+                            <h3>Escuta</h3>
+                            <span class="bars"><span class="alemao-escuta"></span></span>
+                        </li>
+                        <li>
+                            <h3>Escrita</h3>
+                            <span class="bars"><span class="alemao-escrita"></span></span>
+                        </li>
+                        <li>
+                            <h3>Leitura</h3>
+                            <span class="bars"><span class="alemao-leitura"></span></span>
+                        </li>
+                        <li>
+                            <h3>HTML5</h3>
+                            <span class="bars"><span class="alemao-fala"></span></span>
+                        </li>
+                        <li>
+                            <h3>Escuta</h3>
+                            <span class="bars"><span class="alemao-escuta"></span></span>
+                        </li>
+                        <li>
+                            <h3>Escrita</h3>
+                            <span class="bars"><span class="alemao-escrita"></span></span>
+                        </li>
+                        <li>
+                            <h3>Leitura</h3>
+                            <span class="bars"><span class="alemao-leitura"></span></span>
+                        </li>
+                    </ul>
+                </div>
+
             </article>
         </section>
         <section id="languages" class="languages">
             <div id="level-box">
                 <h1>Idiomas</h1>
                 <p class="level-paragraph">Classificando os níveis do idioma em 6 partes sendo elas respectivamente:</p>
-                <ul id="levels">
-                    <li>
-                        <h2>Iniciante</h2>
-                    </li>
-                    <li>
-                        <h2>Básico</h2>
-                    </li>
-                    <li>
-                        <h2>Intermediário</h2>
-                    </li>
-                    <li>
-                        <h2>Avançado</h2>
-                    </li>
-                    <li>
-                        <h2>Proeficiente</h2>
-                    </li>
-                    <li>
-                        <h2>Nativo</h2>
-                    </li>
-                    <li> </li>
-                </ul>
+                <button type="button" class="level-btn" onclick="showDetails('iniciante')">
+                    Iniciante
+                </button>
+                <button type="button" class="level-btn" onclick="showDetails('basico')">
+                    Básico
+                </button>
+                <button type="button" class="level-btn" onclick="showDetails('intermediario')">
+                    Intermediário
+                </button>
+                <button type="button" class="level-btn" onclick="showDetails('avancado')">
+                    Avançado
+                </button>
+                <button type="button" class="level-btn" onclick="showDetails('proficiente')">
+                    Proficiente
+                </button>
+                <button type="button" class="level-btn" onclick="showDetails('nativo')">
+                    Nativo
+                </button>
+            </div>
             </div>
             <article class="languages-card">
                 <div class="language-alemao">
@@ -248,7 +370,8 @@
             <h2 class="projects-title"> Meus Projetos</h2>
             <div class="projects-box">
                 <article class="project-card" data-tipo="projeto-pessoal">
-                    <img src="../images/logoHarmony.png" alt="imagem do projeto da clinica de estetica" class="img-project">
+                    <img src="../images/logoHarmony.png" alt="imagem do projeto da clinica de estetica"
+                        class="img-project">
                     <div class="project-info">
                         <h3 class="project-name">Harmony Aesthetics Zentrum</h3>
                         <p class="project-paragraph">
@@ -264,62 +387,63 @@
                 </article>
                 <article class="project-card" data-tipo="projeto-pessoal">
                     <img src="../images/loja.png" alt="imagem do projeto LiFitness em busca da saúde e bem estar."
-                    class="img-project">
+                        class="img-project">
                     <div class="project-info">
-                    <h3 class="project-name">LiFitness</h3>
-                    <p class="project-paragraph">
-                        Encontre o personal certo, com a rotina certa e de quebra um nutricionista se você precisar
-                        organizar sua alimentação.
-                        <a href="https://github.com/DevJuniorss/LiFitness" target="_blank" class="btn-projeto">Ver
-                            repositório</a>
-                    </p>
+                        <h3 class="project-name">LiFitness</h3>
+                        <p class="project-paragraph">
+                            Encontre o personal certo, com a rotina certa e de quebra um nutricionista se você precisar
+                            organizar sua alimentação.
+                            <a href="https://github.com/DevJuniorss/LiFitness" target="_blank" class="btn-projeto">Ver
+                                repositório</a>
+                        </p>
                     </div>
                 </article>
                 <article class="project-card" data-tipo="projeto-pessoal">
                     <img src="../images/logoClinicaSiqueira.jpeg" alt="imagem do projeto Findme" class="img-project">
                     <div class="project-info">
-                    <h3 class="project-name">Consultorio Siqueira</h3>
-                    <p class="project-paragraph">
-                        Consultorio Socorro Siqueira. Agende sua consulta.
-                        <a href="https://github.com/DevJuniorss/Findme" target="_blank" class="btn-projeto">Ver
-                            repositório</a>
-                    </p>
+                        <h3 class="project-name">Consultorio Siqueira</h3>
+                        <p class="project-paragraph">
+                            Consultorio Socorro Siqueira. Agende sua consulta.
+                            <a href="https://github.com/DevJuniorss/Findme" target="_blank" class="btn-projeto">Ver
+                                repositório</a>
+                        </p>
                     </div>
                 </article>
                 <article class="project-card" data-tipo="projeto-pessoal">
                     <img src="../images/logoDepositoSiqueira.png" alt="imagem do projeto Siqueira Construção"
-                    class="img-project">
+                        class="img-project">
                     <div class="project-info">
-                    <h3 class="project-name">Deposito Siqueira</h3>
-                    <p class="project-paragraph">
-                        Loja onde você encontra tudo para reformar e construir!
-                        <a href="https://github.com/DevJuniorss/DepositoSiqueira" target="_blank"
-                            class="btn-projeto">Ver
-                            repositório</a>
-                    </p>
+                        <h3 class="project-name">Deposito Siqueira</h3>
+                        <p class="project-paragraph">
+                            Loja onde você encontra tudo para reformar e construir!
+                            <a href="https://github.com/DevJuniorss/DepositoSiqueira" target="_blank"
+                                class="btn-projeto">Ver
+                                repositório</a>
+                        </p>
                     </div>
                 </article>
                 <article class="project-card" data-tipo="projeto-pessoal">
                     <img src="../images/logoKerozeneStore.png" alt="imagem do projeto Kerosene Store."
-                    class="img-project">
+                        class="img-project">
                     <div class="project-info">
-                    <h3 class="project-name">Kerosene Store</h3>
-                    <p class="project-paragraph">
-                        Loja para suplementos e acessorios, tudo em um só lugar.
-                        <a href="https://github.com/DevJuniorss/KerozeneStore" target="_blank" class="btn-projeto">Ver
-                            repositório</a>
-                    </p>
+                        <h3 class="project-name">Kerosene Store</h3>
+                        <p class="project-paragraph">
+                            Loja para suplementos e acessorios, tudo em um só lugar.
+                            <a href="https://github.com/DevJuniorss/KerozeneStore" target="_blank"
+                                class="btn-projeto">Ver
+                                repositório</a>
+                        </p>
                     </div>
                 </article>
                 <article class="project-card" data-tipo="projeto-pessoal">
                     <img src="../images/logoMaze.png" alt="imagem do projeto Kerosene Store." class="img-project">
                     <div class="project-info">
-                    <h3 class="project-name">MazeRunner</h3>
-                    <p class="project-paragraph">
-                        Pequeno jogo usando alguns algoritmos de busca.
-                        <a href="https://github.com/DevJuniorss/MazeRunner" target="_blank" class="btn-projeto">Ver
-                            repositório</a>
-                    </p>
+                        <h3 class="project-name">MazeRunner</h3>
+                        <p class="project-paragraph">
+                            Pequeno jogo usando alguns algoritmos de busca.
+                            <a href="https://github.com/DevJuniorss/MazeRunner" target="_blank" class="btn-projeto">Ver
+                                repositório</a>
+                        </p>
                     </div>
                 </article>
             </div>
@@ -398,13 +522,14 @@
             <p>Envia uma mensagem e vamos ver essa ideia se tornar realidade.</p>
         </aside>
     </main>
-
     <footer>
         <p>&copy; Todos os direitos reservados</p>
         <div class="social">
-           <a href="https://www.linkedin.com/in/devjuniorss"><img src="../images/iconLinkedin.svg" alt="Icone do Linkedin"></a>
-           <a href="https://www.instagram.com/devjuniorss"><img src="../images/iconInstagram.svg" alt="Icone do Instagram"></a> 
-           <a href="https://github.com/DevJuniorss"><img src="../images/iconGitHub.png" alt="Icone do Git Hub"></a>
+            <a href="https://www.linkedin.com/in/devjuniorss"><img src="../images/iconLinkedin.svg"
+                    alt="Icone do Linkedin"></a>
+            <a href="https://www.instagram.com/devjuniorss"><img src="../images/iconInstagram.svg"
+                    alt="Icone do Instagram"></a>
+            <a href="https://github.com/DevJuniorss"><img src="../images/iconGitHub.png" alt="Icone do Git Hub"></a>
         </div>
     </footer>
 
