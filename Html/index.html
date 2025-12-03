@@ -16,13 +16,13 @@
 <body>
     <div class="particulas"></div>
     <header>
-        <div class="interface">
+        <div class="container flex">
             <!-- quando lançar o site da empresa lembrar de atualizar aqui. -->
             <!-- <h1 class="oblivium">Oblivium Solution</h1>
             <img src="" alt="logo Oblivium Solutions"> -->
 
-            <nav class="nav-bar">
-                <ul class="menu">
+            <nav class="nav-bar flex flex-row flex-between">
+                <ul class="menu flex flex-row">
                     <li><a href="#intro" class="menu-link">E aí tudo bem?</a></li>
                     <li><a href="#skills" class="menu-link">Skills</a></li>
                     <li><a href="#techs" class="menu-link">Tecnologias</a></li>
@@ -31,188 +31,254 @@
                     <li><a href="#exp" class="menu-link">Experiencias</a></li>
                     <li><a href="#diplomas" class="menu-link">Diplomas</a></li>
                     <li><a href="#contato" class="menu-link">Contato</a></li>
-                    <!-- corrijir import do fontawesome -->
-                     <button id="theme" type="button">
-                         <i class="fa-solid fa-moon">*</i>
-                     </button> 
                 </ul>
+                <!-- corrijir import do fontawesome -->
+                <button id="btn-theme" type="button">
+                    <i class="fa-solid fa-moon">*</i>
+                </button>
             </nav>
         </div>
     </header>
     <main>
         <section id="intro" class="intro">
-            <article class="perfil" data-tipo="img-perfil">
-                <img src="../images/profile.png" alt="foto de perfil junior" class="foto-perfil">
-                <h1>Alexandre Júnior</h1>
-                <p class="intro-title"> E aí, vamos inovar?</p>
-                <div id="intro-box" class="intro-box">
-                    <p class="intro-paragraph">
-                        Meu nome é Alexandre Júnior e sou desenvolvedor e estudante de engenharia de software.
-                        Ofereço soluções web e mobile como serviços freelancer além de consultoria em alguns casos.
-                        Tenho interesse em gerencia de projetos, cyber segurança e IA.
-                        Chamei sua atenção? Olha minhas competências com mais calma
-                        Quer conversar mais sobre?
-                    </p>
-                    <button id="download-cv">Downalod CV</button>
-                    <button id="#skills">Competencias</button>
-                    <button id="#contato">Contato</button>
-                </div>
-            </article>
+            <div class="container flex flex-center">
+                <div class="flex flex-center">
+                    <article class="perfil flex flex-center" data-tipo="img-perfil">
+                        <img src="../images/profile.png" alt="foto de perfil" class="foto-perfil">
+                        <h1 class="name">Alexandre Júnior</h1>
+                        <h1 class="role">Engenheiro de Software</h1>
+                    </article>
+                    <div id="intro-box" class="intro-box">
+                        <!-- depois adicionar icone de pensamento e jogar o titulo para fora da box -->
+                        <p class="intro-title"> E aí, vamos inovar?</p>
+                        <p class="intro-paragraph">
+                            Meu nome é Alexandre Júnior e sou desenvolvedor e estudante de engenharia de software.
+                            Ofereço soluções web e mobile como serviços freelancer além de consultoria em alguns
+                            casos.
+                            Tenho interesse em gerencia de projetos, cyber segurança e IA.
+                        </p>
+                        <p class="intro-paragraph">
+                            Chamei sua atenção? Olha minhas competências com mais calma.
+                            Quer conversar mais sobre?
+                        </p>
+                        <div class="intro-btn flex flex-row flex-center">
+                            <!-- anexar link para download do cv -->
+                            <a href="baixar cv"><button id="btn">Downalod CV</button></a>
+                            <a href="#skills"><button id="btn">Competencias</button></a>
+                            <a href="#contato"><button id="btn btn-alt">Contato</button></a>
+                        </div>
+                    </div> <!-- intro-box end-->
+                </div> <!-- flex end-->
+            </div> <!--container end-->
         </section>
         <section id="skills" class="skills">
-            <h2>Skills</h2>
-            <article>
-                <ul>
-                    <li>Adaptabilidade</li>
-                    <li>Proatividade</li>
-                    <li>Pensamento Análitico</li>
-                    <li>Pensamento Critico</li>
-                    <li>Trabalho em Equipe</li>
-                    <li>Colaboração Ativa</li>
-                    <li>Comunicação Ética e Eficaz</li>
-                    <li>Mentalidade de Aprendizado Continuo</li>
-                    <li>Resolução de Problemas Orientada a Resultados</li>
-                    <li>Scrum</li>
-                    <li>XP</li>
-                    <li>Kanban</li>
-                    <li>Analise de Resquisitos</li>
-                    <li>UML</li>
-                </ul>
-            </article>
+            <div class="container flex flex-center">
+                <h2>Soft Skills</h2>
+                <article>
+                    <ul>
+                        <li>Adaptabilidade</li>
+                        <li>Proatividade</li>
+                        <li>Pensamento Análitico</li>
+                        <li>Pensamento Critico</li>
+                        <li>Trabalho em Equipe</li>
+                        <li>Colaboração Ativa</li>
+                        <li>Comunicação Ética e Eficaz</li>
+                        <li>Mentalidade de Aprendizado Continuo</li>
+                        <li>Resolução de Problemas Orientada a Resultados</li>
+                    </ul>
+                </article>
+            </div>
         </section>
         <section id="techs" class="techs">
-            <h2>Tecnologias</h2>
+            <h2>Hard Skills</h2>
             <article>
-                <section id="#frontend"> Front End</section>
-                <section id="#backend"> Back End</section>
-                <section id="#mobile"> Mobile</section>
-                <section id="#database"> Banco de Dados</section>
-                <section id="#cloud"> Cloud</section>
-                <section id="#inteligenci-artificial"> IA</section>
-                <section id="#process"> Software Engenire</section>
-                <section id="#frameworks"> Frameworks & Libraries</section>
-                <section id="#interest"> Interesses </section>
-
-                <!-- tabelas de skill em tech feitas com span de baixo pra cima -->
-                <div class="frontend">
+                <!-- usar fontawesome para trocar os nomes por icones depois -->
+                <div class="hard-skills btn btn-alt">
+                    <a href="#desktop"><button id="desktop btn">Desktop</button></a>
+                    <a href="#web"><button id="desktop btn">Web</button></a>
+                    <a href="#mobile"><button id="desktop btn">Mobile</button></a>
+                    <a href="#database"><button id="desktop btn">Banco de Dados</button></a>
+                    <a href="#cloud"><button id="desktop btn">Cloud</button></a>
+                    <a href="#process"><button id="desktop btn">Management & Process</button></a>
+                    <a href="#framework"><button id="desktop btn">Frameworks</button></a>
+                    <a href="#devOps-tools"><button id="desktop btn">DevOps</button></a>
+                    <a href="#interest"><button id="desktop btn">Interest</button></a>
+                    <a href="#inteligencia-artifial"><button id="desktop btn">IA</button></a>
+                </div>
+                <div id="desktop">
                     <ul>
                         <li>
-                            <h3>HTML5</h3>
-                            <span class="bars"><span class="frontend-skill"></span></span>
+                            <h3>Java</h3><span class="bars"><span class="java-skill"></span></span>
                         </li>
                         <li>
-                            <h3>CSS3</h3>
-                            <span class="bars"><span class="frontend-skill"></span></span>
+                            <h3>C</h3>
+                            <span class="bars"><span class="c-skill"></span></span>
                         </li>
                         <li>
-                            <h3>Escrita</h3>
-                            <span class="bars"><span class="frontend-skill"></span></span>
+                            <h3>C++</h3>
+                            <span class="bars"><span class="c++-skill"></span></span>
                         </li>
                         <li>
-                            <h3>Leitura</h3>
-                            <span class="bars"><span class="alemao-leitura"></span></span>
+                            <h3>Python</h3>
+                            <span class="bars"><span class="py-skill"></span></span>
                         </li>
                         <li>
-                            <h3>HTML5</h3>
-                            <span class="bars"><span class="alemao-fala"></span></span>
-                        </li>
-                        <li>
-                            <h3>Escuta</h3>
-                            <span class="bars"><span class="alemao-escuta"></span></span>
-                        </li>
-                        <li>
-                            <h3>Escrita</h3>
-                            <span class="bars"><span class="alemao-escrita"></span></span>
-                        </li>
-                        <li>
-                            <h3>Leitura</h3>
-                            <span class="bars"><span class="alemao-leitura"></span></span>
-                        </li>
-                        <li>
-                            <h3>HTML5</h3>
-                            <span class="bars"><span class="alemao-fala"></span></span>
-                        </li>
-                        <li>
-                            <h3>Escuta</h3>
-                            <span class="bars"><span class="alemao-escuta"></span></span>
-                        </li>
-                        <li>
-                            <h3>Escrita</h3>
-                            <span class="bars"><span class="alemao-escrita"></span></span>
-                        </li>
-                        <li>
-                            <h3>Leitura</h3>
-                            <span class="bars"><span class="alemao-leitura"></span></span>
-                        </li>
-                        <li>
-                            <h3>HTML5</h3>
-                            <span class="bars"><span class="alemao-fala"></span></span>
-                        </li>
-                        <li>
-                            <h3>Escuta</h3>
-                            <span class="bars"><span class="alemao-escuta"></span></span>
-                        </li>
-                        <li>
-                            <h3>Escrita</h3>
-                            <span class="bars"><span class="alemao-escrita"></span></span>
-                        </li>
-                        <li>
-                            <h3>Leitura</h3>
-                            <span class="bars"><span class="alemao-leitura"></span></span>
-                        </li>
-                        <li>
-                            <h3>HTML5</h3>
-                            <span class="bars"><span class="alemao-fala"></span></span>
-                        </li>
-                        <li>
-                            <h3>Escuta</h3>
-                            <span class="bars"><span class="alemao-escuta"></span></span>
-                        </li>
-                        <li>
-                            <h3>Escrita</h3>
-                            <span class="bars"><span class="alemao-escrita"></span></span>
-                        </li>
-                        <li>
-                            <h3>Leitura</h3>
-                            <span class="bars"><span class="alemao-leitura"></span></span>
-                        </li>
-                        <li>
-                            <h3>HTML5</h3>
-                            <span class="bars"><span class="alemao-fala"></span></span>
-                        </li>
-                        <li>
-                            <h3>Escuta</h3>
-                            <span class="bars"><span class="alemao-escuta"></span></span>
-                        </li>
-                        <li>
-                            <h3>Escrita</h3>
-                            <span class="bars"><span class="alemao-escrita"></span></span>
-                        </li>
-                        <li>
-                            <h3>Leitura</h3>
-                            <span class="bars"><span class="alemao-leitura"></span></span>
-                        </li>
-                        <li>
-                            <h3>HTML5</h3>
-                            <span class="bars"><span class="alemao-fala"></span></span>
-                        </li>
-                        <li>
-                            <h3>Escuta</h3>
-                            <span class="bars"><span class="alemao-escuta"></span></span>
-                        </li>
-                        <li>
-                            <h3>Escrita</h3>
-                            <span class="bars"><span class="alemao-escrita"></span></span>
-                        </li>
-                        <li>
-                            <h3>Leitura</h3>
-                            <span class="bars"><span class="alemao-leitura"></span></span>
+                            <h3>C#</h3>
+                            <span class="bars"><span class="csharp-skill"></span></span>
                         </li>
                     </ul>
                 </div>
-
+                <div id="web">
+                    <ul>
+                        <li>
+                            <h3>HTML5</h3>
+                            <span class="bars"><span class="html-skill"></span></span>
+                        </li>
+                        <li>
+                            <h3>CSS3</h3>
+                            <span class="bars"><span class="css-skill"></span></span>
+                        </li>
+                        <li>
+                            <h3>JavaScript</h3>
+                            <span class="bars"><span class="js-skill"></span></span>
+                        </li>
+                        <li>
+                            <h3>TypeScript</h3>
+                            <span class="bars"><span class="tsx-skill"></span></span>
+                        </li>
+                    </ul>
+                </div>
+                <div id="mobile">
+                    <ul>
+                        <li>
+                            <h3>Java</h3>
+                            <span class="bars"><span class="java-mobile-skill"></span></span>
+                        </li>
+                        <li>
+                            <h3>Kotlin</h3>
+                            <span class="bars"><span class="kotlin-skill"></span></span>
+                        </li>
+                        <li>
+                            <h3>Dart</h3>
+                            <span class="bars"><span class="dart-skill"></span></span>
+                        </li>
+                    </ul>
+                </div>
+                <div id="database">
+                    <ul>
+                        <li>
+                            <h3>PostgreSQL</h3>
+                            <span class="bars"><span class="postgre-skill"></span></span>
+                        </li>
+                        <li>
+                            <h3>MongoDB</h3>
+                            <span class="bars"><span class="mongo-skill"></span></span>
+                        </li>
+                        <li>
+                            <h3>MySQL</h3>
+                            <span class="bars"><span class="mysql-skill"></span></span>
+                        </li>
+                        <li>
+                            <h3>SQLite</h3>
+                            <span class="bars"><span class="sqlite-skill"></span></span>
+                        </li>
+                    </ul>
+                </div>
+                <div id="devOps-tools">
+                    <!-- quando aumentar dividir para git, aws, azure e google -->
+                    <ul>
+                        <li>
+                            <h3>GitHub</h3>
+                            <span class="bars"><span class="gitHub-skill"></span></span>
+                        </li>
+                        <li>
+                            <h3>GitLab</h3>
+                            <span class="bars"><span class="gitLab-skill"></span></span>
+                        </li>
+                        <li>
+                            <h3>Git</h3>
+                            <span class="bars"><span class="git-skill"></span></span>
+                        </li>
+                        <li>
+                            <h3>Git Actions</h3>
+                            <span class="bars"><span class="gitActions-skill"></span></span>
+                        </li>
+                        <li>
+                            <h3>AWS Services</h3>
+                            <span class="bars"><span class="services-skill"></span></span>
+                        </li>
+                        <li>
+                            <h3>Firebase</h3>
+                            <span class="bars"><span class="friebase-skill"></span></span>
+                        </li>
+                        <li>
+                            <h3>Azure</h3>
+                            <span class="bars"><span class="azure-skill"></span></span>
+                        </li>
+                        <li>
+                            <h3>Google Cloud</h3>
+                            <span class="bars"><span class="google-skill"></span></span>
+                        </li>
+                        <li>
+                            <h3>Docker</h3>
+                            <span class="bars"><span class="docker-skill"></span></span>
+                        </li>
+                    </ul>
+                </div>
+                <div id="inteligencia-artificial">
+                    <!-- quando finalizar os cursos colocar aqui -->
+                    <ul>
+                        Pesuisando sobre...
+                    </ul>
+                </div>
+                <div id="process">
+                    <ul>
+                        <li>
+                            <h3>Scrum</h3>
+                            <span class="bars"><span class="scrum-skill"></span></span>
+                        </li>
+                        <li>
+                            <h3>Kanban</h3>
+                            <span class="bars"><span class="kanban-skill"></span></span>
+                        </li>
+                        <li>
+                            <h3>UML</h3>
+                            <span class="bars"><span class="uml-skill"></span></span>
+                        </li>
+                        <li>
+                            <h3>XP</h3>
+                            <span class="bars"><span class="xp-skill"></span></span>
+                        </li>
+                        <li>
+                            <h3>Analise de Requisitos</h3>
+                            <span class="bars"><span class="req-skill"></span></span>
+                        </li>
+                        <li>
+                            <h3>Analise de Dados</h3>
+                            <span class="bars"><span class="data-analise-skill"></span></span>
+                        </li>
+                    </ul>
+                </div>
+                <div id="frameworks">
+                    <ul>
+                        <li>
+                            <h3>React</h3>
+                            <span class="bars"><span class="react-skill"></span></span>
+                        </li>
+                        <li>
+                            <h3>Vue.js</h3>
+                            <span class="bars"><span class="vue-skill"></span></span>
+                        </li>
+                        <li>
+                            <h3>Flutter</h3>
+                            <span class="bars"><span class="flutter-skill"></span></span>
+                        </li>
+                    </ul>
+                </div>
             </article>
         </section>
+
+        <!-- Organizar btn e remover js -->
         <section id="languages" class="languages">
             <div id="level-box">
                 <h1>Idiomas</h1>
