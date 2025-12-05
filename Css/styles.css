@@ -20,6 +20,8 @@
 
     --glass: rgba(255, 255, 255, 0.06);
     --glass-border: rgba(255, 255, 255, 0.2);
+    
+    --transition-speed: 0.5s;
 }
 
 html {
@@ -30,35 +32,169 @@ body {
     width: 100%;
     min-height: 100vh;
     background-color: var(--brand-dark);
+    color: var(--brand-gray-light);
 }
 
-.container{
+/* text Pattern */
+h1, h2, h3, h4, h5, h6{
+    margin-bottom: 1rem;
+}
+
+h1{
+    font-size: 3rem;
+    margin-top: 1rem;
+    color: var(--text-light);
+}
+
+h2{
+    font-size: 2.5rem;
+    color: var(--brand-green-light);
+}
+
+h3{
+    font-size: 2rem;
+    color: var(--brand-green-light);
+}
+
+p{
+    color: var(--brand-gray-light);
+    font-size: 1.4rem;
+    text-align: center;
+    line-height: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+/* Utilitarios */
+.container {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 1.5rem;
 }
 
-.flex{
+.glass-box{
+    background: var(--brand-gray);
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+    backdrop-filter: blur(16px);
+}
+
+.box {
+    padding: 2rem;
+    max-width: 600px;
+    margin-top: 2rem;
+    /*remover futuramente  */
+    background: var(--brand-gray);
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+    backdrop-filter: blur(16px);
+    /* repetido em glass box */
+}
+
+
+.card {
+    /* elementos da box estão aqui dentro preciso remover depois para otimizar o codigo */
+    background: var(--brand-gray);
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+    padding: 1.5rem;
+    min-width: 200px;
+    max-width: 300px;
+    transition: transform var(--transition-speed) ease;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Btn Pattern */
+.btn {
+    border: none;
+    border-radius: 16px;
+    padding: 0.5rem 1rem;
+    color: var(--text-dark);
+    background: var(--brand-green);
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.btn:hover {
+    opacity: 0.85;
+    transform: scale(1.1);
+}
+
+.btn-alt {
+    background: var(--brand-green-light);
+}
+
+.btn-outline {
+    background: transparent;
+    border: 2px solid var(--brand-green);
+    color: var(--brand-green);
+}
+
+.btn-outline:hover {
+    background: var(--brand-green);
+    color: var(var(--text-dark));
+}
+
+/* display flex e orientações */
+.flex {
     display: flex;
     flex-direction: column;
-    gap:  1rem;
+    gap: 1rem;
     width: 100%;
 }
 
-/* Utilitarios */
-.flex-row {
-    flex-direction: row;
-}
-
+.flex-wrap{flex-wrap: wrap;}
+.flex-row {flex-direction: row;}    
+.flex-col-rev {flex-direction: column-reverse;}    
+.flex-between {justify-content: space-between;}    
+.flex-evenly{justify-content: space-evenly;}
 .flex-center {
     justify-content: center;
     align-items: center;
+}    
+
+/* Barras de Habilidate */
+
+.skill-bar {
+    background-color: var(--brand-gray-dark);
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
 }
 
-.flex-between {
-    justify-content: space-between;
+.bar-vertical{
+    width: 20px;
+    height: 100px;
 }
+
+/* O preenchimento colorido genérico */
+.bar-fill-vert {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0; 
+    background: linear-gradient(to top, #fe4701, #ff0054);
+    border-radius: 0 0 10px 10px;
+    
+    /* A mágica acontece aqui: animamos até a altura definida na variável --h */
+    animation: fillBars 1.5s ease-in-out forwards;
+}
+
+
+@keyframes fillBars {
+    from { height: 0; }
+    to { height: var(--h); }
+}
+
 /* Default configs end*/
 
 /* page start */
@@ -77,7 +213,7 @@ body {
         var(--brand-dark);
 }
 
-header{
+header {
     position: sticky;
     width: 100%;
     top: 0;
@@ -86,19 +222,19 @@ header{
     z-index: 100;
 }
 
-header .container{
+header .container {
     width: 100%;
 }
 
-.nav-bar{
+.nav-bar {
     width: 100%;
     padding: 1rem 0;
     top: 0;
-    z-index: 100; 
+    z-index: 100;
 }
 
 /* adicionar js para usabiliadade e organizar a tela */
-.menu{
+.menu {
     list-style: none;
     width: 100%;
     gap: 3rem;
@@ -130,7 +266,7 @@ header .container{
 }
 
 /* corrijir importe de fontawesome*/
-#btn-theme{
+#btn-theme {
     border: none;
     padding: 0.5rem 1rem;
     border-radius: 32px;
@@ -140,14 +276,14 @@ header .container{
     cursor: pointer;
     color: var(--text-dark);
     font-size: 1rem;
-} 
+}
 
 .intro {
     padding: 4rem 0 2rem 0;
     min-height: 100vh;
-}    
+}
 
-.perfil{
+.perfil {
     text-align: center;
     text-decoration: solid;
 }
@@ -159,25 +295,21 @@ header .container{
     border: 4px solid var(--brand-green);
     filter: grayscale(0.2) contrast(1.1);
     animation: float 3s ease-in-out infinite;
-    box-shadow: 0 0 25px rgba(0,0,0,0.4);
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
 }
 
 @keyframes float {
-    0% { transform: translateY(0px); }
-    50% { transform: translateY(-12px); }
-    100% { transform: translateY(0px); }
-}
+    0% {
+        transform: translateY(0px);
+    }
 
-.name{
-    font-size: 3rem;
-    margin-top: 1rem;
-    color: var(--text-light);
-}
+    50% {
+        transform: translateY(-12px);
+    }
 
-.role{
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    color: var(--brand-green-light);
+    100% {
+        transform: translateY(0px);
+    }
 }
 
 .intro-box {
@@ -190,37 +322,6 @@ header .container{
     backdrop-filter: blur(16px);
 }
 
-.intro-title {
-    font-size: 3rem;
-    color: var(--brand-gray-light);
-    margin-bottom: 2px;
-}
-
-.intro-paragraph {
-    font-size: 1.5rem;
-    text-align: center;
-    color: var(--brand-gray-light);
-    margin-bottom: 1rem;
-}
-
-.btn{
-    color: var(--text-dark);
-    border-radius: 16px;
-    background: var(--brand-green);
-    padding: 0.5rem 1rem;
-    text-decoration: none;
-    font-weight: bold;
-    transition: 0.5s ease;
-}
-
-.btn:hover{
-    opacity: 0.85;
-}
-
-.btn-alt{
-    background: var(--brand-green-light);
-}
-
 .skills {
     display: flex;
     justify-content: center;
@@ -231,34 +332,10 @@ header .container{
 }
 
 .techs {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-
+    justify-content: left;
 }
 
-#desktop {}
-
-#web {}
-
-#mobile {}
-
-#database {}
-
-#cloud {}
-
-#inteligencia-artificial {}
-
-#process {}
-
-#frameworks {}
-
-#devOps-tools{}
-
-#interest {}
-
-.languages {
+/* .languages {
     padding-top: 6rem;
     min-height: 100vh;
     display: flex;
@@ -266,7 +343,7 @@ header .container{
     align-items: center;
     flex-direction: column;
     background: radial-gradient(circle at 75% 30%), var(--brand-green), 0%, transparent 30%;
-}
+} */
 
 #level-box .level-btn {
     display: flex;

@@ -8,8 +8,8 @@
     <title>Junior SS</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='../Css/styles.css'>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-        integrity="sha512-SnH5WK+bZxgPHs44uWmL2IXYH1R9Lx6B1YQ1e1N9t+WmD6XJQanYd2VJQz7rj0J9Kf3wR4pQ9P1+O7x1Y6d9dw=="
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
@@ -48,13 +48,11 @@
                         <h1 class="name">Alexandre Júnior</h1>
                         <h1 class="role">Engenheiro de Software</h1>
                     </article>
-                    <div id="intro-box" class="intro-box">
+                    <div class="intro-box">
                         <!-- depois adicionar icone de pensamento e jogar o titulo para fora da box -->
                         <p class="intro-title"> E aí, vamos inovar?</p>
                         <p class="intro-paragraph">
-                            Meu nome é Alexandre Júnior e sou desenvolvedor e estudante de engenharia de software.
-                            Ofereço soluções web e mobile como serviços freelancer além de consultoria em alguns
-                            casos.
+                            Ofereço soluções web e mobile como serviços freelancer além de consultoria em alguns casos.
                             Tenho interesse em gerencia de projetos, cyber segurança e IA.
                         </p>
                         <p class="intro-paragraph">
@@ -63,18 +61,18 @@
                         </p>
                         <div class="intro-btn flex flex-row flex-center">
                             <!-- anexar link para download do cv -->
-                            <a href="baixar cv"><button id="btn">Downalod CV</button></a>
-                            <a href="#skills"><button id="btn">Competencias</button></a>
-                            <a href="#contato"><button id="btn btn-alt">Contato</button></a>
+                            <a href="baixar cv"><button class="btn">Downalod CV</button></a>
+                            <a href="#skills"><button class="btn">Competencias</button></a>
+                            <a href="#contato"><button class="btn btn-alt">Contato</button></a>
                         </div>
                     </div> <!-- intro-box end-->
                 </div> <!-- flex end-->
             </div> <!--container end-->
         </section>
-        <section id="skills" class="skills">
-            <div class="container flex flex-center">
+        <section id="skills" class="skills container flex flex-center">
+            <div class="card flex-row">
                 <h2>Soft Skills</h2>
-                <article>
+                <article class="card flex-between">
                     <ul>
                         <li>Adaptabilidade</li>
                         <li>Proatividade</li>
@@ -89,200 +87,205 @@
                 </article>
             </div>
         </section>
-        <section id="techs" class="techs">
+        <section id="techs" class="techs container flex flex-center">
             <h2>Hard Skills</h2>
-            <article>
-                <!-- usar fontawesome para trocar os nomes por icones depois -->
-                <div class="hard-skills btn btn-alt">
-                    <a href="#desktop"><button id="desktop btn">Desktop</button></a>
-                    <a href="#web"><button id="desktop btn">Web</button></a>
-                    <a href="#mobile"><button id="desktop btn">Mobile</button></a>
-                    <a href="#database"><button id="desktop btn">Banco de Dados</button></a>
-                    <a href="#cloud"><button id="desktop btn">Cloud</button></a>
-                    <a href="#process"><button id="desktop btn">Management & Process</button></a>
-                    <a href="#framework"><button id="desktop btn">Frameworks</button></a>
-                    <a href="#devOps-tools"><button id="desktop btn">DevOps</button></a>
-                    <a href="#interest"><button id="desktop btn">Interest</button></a>
-                    <a href="#inteligencia-artifial"><button id="desktop btn">IA</button></a>
-                </div>
-                <div id="desktop">
-                    <ul>
-                        <li>
-                            <h3>Java</h3><span class="bars"><span class="java-skill"></span></span>
-                        </li>
-                        <li>
-                            <h3>C</h3>
-                            <span class="bars"><span class="c-skill"></span></span>
-                        </li>
-                        <li>
-                            <h3>C++</h3>
-                            <span class="bars"><span class="c++-skill"></span></span>
-                        </li>
-                        <li>
-                            <h3>Python</h3>
-                            <span class="bars"><span class="py-skill"></span></span>
-                        </li>
-                        <li>
-                            <h3>C#</h3>
-                            <span class="bars"><span class="csharp-skill"></span></span>
-                        </li>
-                    </ul>
-                </div>
-                <div id="web">
-                    <ul>
-                        <li>
-                            <h3>HTML5</h3>
-                            <span class="bars"><span class="html-skill"></span></span>
-                        </li>
-                        <li>
-                            <h3>CSS3</h3>
-                            <span class="bars"><span class="css-skill"></span></span>
-                        </li>
-                        <li>
-                            <h3>JavaScript</h3>
-                            <span class="bars"><span class="js-skill"></span></span>
-                        </li>
-                        <li>
-                            <h3>TypeScript</h3>
-                            <span class="bars"><span class="tsx-skill"></span></span>
-                        </li>
-                    </ul>
-                </div>
-                <div id="mobile">
-                    <ul>
-                        <li>
-                            <h3>Java</h3>
-                            <span class="bars"><span class="java-mobile-skill"></span></span>
-                        </li>
-                        <li>
-                            <h3>Kotlin</h3>
-                            <span class="bars"><span class="kotlin-skill"></span></span>
-                        </li>
-                        <li>
-                            <h3>Dart</h3>
-                            <span class="bars"><span class="dart-skill"></span></span>
-                        </li>
-                    </ul>
-                </div>
-                <div id="database">
-                    <ul>
-                        <li>
-                            <h3>PostgreSQL</h3>
-                            <span class="bars"><span class="postgre-skill"></span></span>
-                        </li>
-                        <li>
-                            <h3>MongoDB</h3>
-                            <span class="bars"><span class="mongo-skill"></span></span>
-                        </li>
-                        <li>
-                            <h3>MySQL</h3>
-                            <span class="bars"><span class="mysql-skill"></span></span>
-                        </li>
-                        <li>
-                            <h3>SQLite</h3>
-                            <span class="bars"><span class="sqlite-skill"></span></span>
-                        </li>
-                    </ul>
-                </div>
-                <div id="devOps-tools">
-                    <!-- quando aumentar dividir para git, aws, azure e google -->
-                    <ul>
-                        <li>
-                            <h3>GitHub</h3>
-                            <span class="bars"><span class="gitHub-skill"></span></span>
-                        </li>
-                        <li>
-                            <h3>GitLab</h3>
-                            <span class="bars"><span class="gitLab-skill"></span></span>
-                        </li>
-                        <li>
-                            <h3>Git</h3>
-                            <span class="bars"><span class="git-skill"></span></span>
-                        </li>
-                        <li>
-                            <h3>Git Actions</h3>
-                            <span class="bars"><span class="gitActions-skill"></span></span>
-                        </li>
-                        <li>
-                            <h3>AWS Services</h3>
-                            <span class="bars"><span class="services-skill"></span></span>
-                        </li>
-                        <li>
-                            <h3>Firebase</h3>
-                            <span class="bars"><span class="friebase-skill"></span></span>
-                        </li>
-                        <li>
-                            <h3>Azure</h3>
-                            <span class="bars"><span class="azure-skill"></span></span>
-                        </li>
-                        <li>
-                            <h3>Google Cloud</h3>
-                            <span class="bars"><span class="google-skill"></span></span>
-                        </li>
-                        <li>
-                            <h3>Docker</h3>
-                            <span class="bars"><span class="docker-skill"></span></span>
-                        </li>
-                    </ul>
-                </div>
-                <div id="inteligencia-artificial">
-                    <!-- quando finalizar os cursos colocar aqui -->
-                    <ul>
-                        Pesuisando sobre...
-                    </ul>
-                </div>
-                <div id="process">
-                    <ul>
-                        <li>
-                            <h3>Scrum</h3>
-                            <span class="bars"><span class="scrum-skill"></span></span>
-                        </li>
-                        <li>
-                            <h3>Kanban</h3>
-                            <span class="bars"><span class="kanban-skill"></span></span>
-                        </li>
-                        <li>
-                            <h3>UML</h3>
-                            <span class="bars"><span class="uml-skill"></span></span>
-                        </li>
-                        <li>
-                            <h3>XP</h3>
-                            <span class="bars"><span class="xp-skill"></span></span>
-                        </li>
-                        <li>
-                            <h3>Analise de Requisitos</h3>
-                            <span class="bars"><span class="req-skill"></span></span>
-                        </li>
-                        <li>
-                            <h3>Analise de Dados</h3>
-                            <span class="bars"><span class="data-analise-skill"></span></span>
-                        </li>
-                    </ul>
-                </div>
-                <div id="frameworks">
-                    <ul>
-                        <li>
-                            <h3>React</h3>
-                            <span class="bars"><span class="react-skill"></span></span>
-                        </li>
-                        <li>
-                            <h3>Vue.js</h3>
-                            <span class="bars"><span class="vue-skill"></span></span>
-                        </li>
-                        <li>
-                            <h3>Flutter</h3>
-                            <span class="bars"><span class="flutter-skill"></span></span>
-                        </li>
-                    </ul>
+            <article class="hard-skills-nav">
+                <div class="hard-skills-btn flex flex-row flex-center">
+                    <a href="#desktop"><button class="btn-desktop btn">Desktop</button></a>
+                    <a href="#web"><button class="btn-web btn">Web</button></a>
+                    <a href="#mobile"><button class="btn-mobile btn">Mobile</button></a>
+                    <a href="#database"><button class="btn-database btn">Banco de Dados</button></a>
+                    <a href="#cloud"><button class="btncloud btn">Cloud</button></a>
+                    <a href="#process"><button class="btn-process btn">Management & Process</button></a>
+                    <a href="#frameworks"><button class="btn-frame btn">Frameworks</button></a>
+                    <a href="#dev-ops-tools"><button class="btn-devops btn">DevOps</button></a>
+                    <a href="#interest"><button class="btn-interest btn">Interest</button></a>
                 </div>
             </article>
-        </section>
+            <article id="desktop" class="card flex-row ">
 
-        <!-- Organizar btn e remover js -->
-        <section id="languages" class="languages">
-            <div id="level-box">
+                <ul class="flex flex-row flex-evenly">
+                    <li>
+                        <i class="fa-brands fa-java fa-3x"></i>
+                        <span class="bar-fill-vert" style="--h: 60%"><span class="java-skill"></span></span>
+                    </li>
+                    <li>
+                        <h3>C</h3>
+                        <span class="skill-bar bar-vert"><span class="c-skill"></span></span>
+                    </li>
+                    <li>
+                        <h3>C++</h3>
+                        <span class="skill-bar bar-vert"><span class="cpp-skill"></span></span>
+                    </li>
+                    <li class="flex fel-col flex-between">
+                        <h3>Python</h3>
+                        <span class="skill-bar bar-vert"><span class="py-skill"></span></span>
+                    </li>
+                    <li>
+                        <h3>C#</h3>
+                        <span class="skill-bar bar-vert"><span class="csharp-skill"></span></span>
+                    </li>
+                </ul>
+            </article>
+            <article id="web" class="card flex ">
+                <ul>
+                    <li class="fel-col-rev flex-center">
+                        <h3>HTML5</h3>
+                        <span class="skill-bar bar-vert"><span class="html-skill"></span></span>
+                    </li>
+                    <li>
+                        <h3>CSS3</h3>
+                        <span class="skill-bar bar-vert"><span class="css-skill"></span></span>
+                    </li>
+                    <li>
+                        <h3>JavaScript</h3>
+                        <span class="skill-bar bar-vert"><span class="js-skill"></span></span>
+                    </li>
+                    <li>
+                        <h3>TypeScript</h3>
+                        <span class="skill-bar bar-vert"><span class="tsx-skill"></span></span>
+                    </li>
+                </ul>
+            </article>
+
+            <!-- MOBILE -->
+            <article id="mobile" class="box">
+                <ul>
+                    <li class="flex fel-col flex-center">
+                        <h3>Java</h3>
+                        <span class="skill-bar bar-vert"><span class="java-mobile-skill"></span></span>
+                    </li>
+                    <li class="flex fel-col flex-center">
+                        <h3>Kotlin</h3>
+                        <span class="skill-bar bar-vert"><span class="kotlin-skill"></span></span>
+                    </li>
+                    <li class="flex fel-col flex-center">
+                        <h3>Dart</h3>
+                        <span class="skill-bar bar-vert"><span class="dart-skill"></span></span>
+                    </li>
+                </ul>
+            </article>
+
+            <!-- DATABASE -->
+            <article id="database" class="box">
+                <ul>
+                    <li class="flex fel-col flex-center">
+                        <h3>PostgreSQL</h3>
+                        <span class="skill-bar bar-vert"><span class="postgre-skill"></span></span>
+                    </li>
+                    <li class="flex fel-col flex-center">
+                        <h3>MongoDB</h3>
+                        <span class="skill-bar bar-vert"><span class="mongo-skill"></span></span>
+                    </li>
+                    <li class="flex fel-col flex-center">
+                        <h3>MySQL</h3>
+                        <span class="skill-bar bar-vert"><span class="mysql-skill"></span></span>
+                    </li>
+                    <li class="flex fel-col flex-center">
+                        <h3>SQLite</h3>
+                        <span class="skill-bar bar-vert"><span class="sqlite-skill"></span></span>
+                    </li>
+                </ul>
+            </article>
+
+            <!-- DEVOPS -->
+            <article id="dev-ops-tools" class="box">
+                <ul>
+                    <li class="flex fel-col flex-center">
+                        <h3>GitHub</h3><span class="skill-bar bar-vert"><span class="gitHub-skill"></span></span>
+                    </li class="flex fel-col flex-center">
+                    <li class="flex fel-col flex-center">
+                        <h3>GitLab</h3><span class="skill-bar bar-vert"><span class="gitLab-skill"></span></span>
+                    </li class="flex fel-col flex-center">
+                    <li class="flex fel-col flex-center">
+                        <h3>Git</h3><span class="skill-bar bar-vert"><span class="git-skill"></span></span>
+                    </li>
+                    <li class="flex fel-col flex-center">
+                        <h3>Git Actions</h3><span class="skill-bar bar-vert"><span
+                                class="gitActions-skill"></span></span>
+                    </li>
+                </ul>
+            </article>
+
+            <!-- CLOUD -->
+            <article id="cloud" class="box">
+                <ul>
+                    <li class="flex fel-col flex-center">
+                        <h3>AWS Services</h3><span class="skill-bar bar-fill bar-vert"><span
+                                class="services-skill"></span></span>
+                    </li>
+                    <li class="flex fel-col flex-center">
+                        <h3>Firebase</h3><span class="skill-bar bar-fill bar-vert"><span
+                                class="friebase-skill"></span></span>
+                    </li>
+                    <li class="flex fel-col flex-center">
+                        <h3>Azure</h3><span class="skill-bar bar-fill bar-vert"><span class="azure-skill"></span></span>
+                    </li>
+                    <li class="flex fel-col flex-center">
+                        <h3>Google Cloud</h3><span class="skill-bar bar-fill bar-vert"><span
+                                class="google-skill"></span></span>
+                    </li>
+                    <li class="flex fel-col flex-center">
+                        <h3>Docker</h3><span class="skill-bar bar-fill bar-vert"><span
+                                class="docker-skill"></span></span>
+                    </li>
+                </ul>
+            </article>
+
+            <!-- FRAMEWORKS -->
+            <article id="frameworks" class="box">
+                <ul>
+                    <li class="flex fel-col flex-center">
+                        <h3>React</h3><span class="skill-bar bar-fill bar-vert"><span class="react-skill"></span></span>
+                    </li>
+                    <li class="flex fel-col flex-center">
+                        <h3>Vue.js</h3><span class="skill-bar bar-fill bar-vert"><span class="vue-skill"></span></span>
+                    </li>
+                    <li class="flex fel-col flex-center">
+                        <h3>Flutter</h3><span class="skill-bar bar-fill bar-vert"><span
+                                class="flutter-skill"></span></span>
+                    </li>
+                </ul>
+            </article>
+
+            <!-- PROCESS -->
+            <article id="process" class="box">
+                <ul>
+                    <li class="flex fel-col flex-center">
+                        <h3>Scrum</h3><span class="skill-bar bar-fill bar-vert"><span class="scrum-skill"></span></span>
+                    </li>
+                    <li class="flex fel-col flex-center">
+                        <h3>Kanban</h3><span class="skill-bar bar-fill bar-vert"><span
+                                class="kanban-skill"></span></span>
+                    </li>
+                    <li class="flex fel-col flex-center">
+                        <h3>UML</h3><span class="skill-bar bar-fill bar-vert"><span class="uml-skill"></span></span>
+                    </li>
+                    <li class="flex fel-col flex-center">
+                        <h3>XP</h3><span class="skill-bar bar-fill bar-vert"><span class="xp-skill"></span></span>
+                    </li>
+                    <li class="flex fel-col flex-center">
+                        <h3>Análise de Requisitos</h3><span class="skill-bar bar-fill bar-vert"><span
+                                class="req-skill"></span></span>
+                    </li>
+                    <li class="flex fel-col flex-center">
+                        <h3>Análise de Dados</h3><span class="skill-bar bar-fill bar-vert"><span
+                                class="data-analise-skill"></span></span>
+                    </li>
+                </ul>
+            </article>
+
+            <!-- INTEREST -->
+            <article id="interest" class="box">
+                <h2>Em breve...</h2>
+            </article>
+
+        </section>
+        <!-- Organizar btn-->
+        <section id="languages" class="container flex flex-center">
+            <div id="box card flex flex-evenly">
                 <h1>Idiomas</h1>
-                <p class="level-paragraph">Classificando os níveis do idioma em 6 partes sendo elas respectivamente:</p>
+                <p>Classificando os níveis do idioma em 6 partes sendo elas respectivamente:</p>
                 <button type="button" class="level-btn" onclick="showDetails('iniciante')">
                     Iniciante
                 </button>
@@ -514,9 +517,9 @@
                 </article>
             </div>
         </section>
-        <section id="exp" class="exp">
-            <h2>Experiencias Profissionais</h2>
-            <article>
+        <section id="exp" class="exp container ">
+            <h2 class=" box">Experiencias Profissionais</h2>
+            <article class="card flex flex-center">
                 <h3 id="cargo"> Técnico de Análise de Dados e Sistemas </h3>
                 <h4 id="empresa">Prefeitura Municipal de Senador Pompeu</h4>
                 <p id="conteudo" class="conteudo">Durante pouco mais de 2 anos estive atuando sob o cargo de Analista no
