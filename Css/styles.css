@@ -159,40 +159,78 @@ p{
 .flex-center {
     justify-content: center;
     align-items: center;
-}    
+}
+
+/* Novo utilitário para layout de barra (Header, etc.) */
+.flex-spread{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+}
+
+/* Utilitário para Carrossel Horizontal (Soft Skills) */
+.scroll-horizontal {
+    display: flex; /* Coloca os itens em linha */
+    flex-direction: row;
+    gap: 2rem; /* Espaçamento entre os itens */
+    width: 100%;
+    overflow-x: auto; /* Permite rolagem horizontal */
+    overflow-y: hidden;
+    padding: 1rem 0; /* Espaço para padding e barra de rolagem */
+    scroll-snap-type: x mandatory; /* Prepara para o carrossel JS/CSS */
+    list-style: none; /* Remove marcadores da lista */
+    padding-left: 0;
+}
+
+.scroll-horizontal li {
+    flex-shrink: 0; /* Impede que os itens encolham */
+    scroll-snap-align: start; /* Alinha o início de cada item no scroll */
+    min-width: 150px; /* Garante que os itens tenham um tamanho mínimo */
+    padding: 0.8rem 1.2rem;
+    background-color: var(--brand-gray-dark); /* Fundo para destacar o item da skill */
+    border-radius: 10px;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
 
 /* Barras de Habilidate */
-
-.skill-bar {
-    background-color: var(--brand-gray-dark);
+/* corrigir */
+progress {
+    width: 120px;
+    height: 10px;
+    appearance: none;
+    -webkit-appearance: none;
     border-radius: 10px;
     overflow: hidden;
-    position: relative;
 }
 
-.bar-vertical{
-    width: 20px;
-    height: 100px;
+/* Fundo */
+progress::-webkit-progress-bar {
+    background: var(--brand-gray-light);
+    border-radius: 10px;
 }
 
-/* O preenchimento colorido genérico */
-.bar-fill-vert {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width:20px;
-    height: 0; 
-    background: linear-gradient(to top, #fe4701, #ff0054);
-    border-radius: 0 0 10px 10px;
-    
-    /* A mágica acontece aqui: animamos até a altura definida na variável --h */
-    animation: fillBars 1.5s ease-in-out forwards;
+/* Barra preenchida */
+progress::-webkit-progress-value {
+    background: var(--brand-green);
+    border-radius: 10px;
 }
 
+progress.animate::-webkit-progress-value {
+    animation: fillBar 2s ease-out forwards;
+}
 
-@keyframes fillBars {
-    from { height: 0; }
-    to { height: var(--h); }
+@keyframes fillBar {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 100%; /* o navegador ajusta internamente para o value/max */
+    }
 }
 
 /* Default configs end*/
@@ -213,7 +251,7 @@ p{
         var(--brand-dark);
 }
 
-header {
+header{
     position: sticky;
     width: 100%;
     top: 0;
@@ -226,12 +264,7 @@ header .container {
     width: 100%;
 }
 
-.nav-bar {
-    width: 100%;
-    padding: 1rem 0;
-    top: 0;
-    z-index: 100;
-}
+/* .nav-bar removido e substituído por .flex-spread no HTML */
 
 /* adicionar js para usabiliadade e organizar a tela */
 .menu {
@@ -267,7 +300,7 @@ header .container {
 
 /* corrijir importe de fontawesome*/
 #btn-theme {
-    border: none;
+     border: none;
     padding: 0.5rem 1rem;
     border-radius: 32px;
     font-size: 16px;
@@ -322,15 +355,69 @@ header .container {
     backdrop-filter: blur(16px);
 }
 
-.skills {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    flex-wrap: wrap;
-    gap: 1.5rem;
+/* softskills */
+
+#soft-skills {
+  padding: 2rem 0;
+  background-color: #f5f5f5;
+}
+
+/* container do carrossel */
+.carousel {
+  width: 100%;
+  overflow: hidden;
+}
+
+/* faixa deslizante */
+.track {
+  display: flex;
+  gap: 2.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  animation: scroll 22s linear infinite;
+}
+
+/* item individual */
+.track li {
+  white-space: nowrap;
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 0.6rem 1.2rem;
+  background: #e1e1e1;
+  border-radius: 12px;
+  color: #222;
+  user-select: none;
+}
+
+/* animação */
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* responsividade */
+@media (max-width: 600px) {
+  .track {
+    gap: 1.2rem;
+  }
+
+  .track li {
+    font-size: 0.95rem;
+    padding: 0.5rem 1rem;
+  }
 }
 
 .techs {
-    justify-content: left;
+    width: 100%;
+    min-width: fit-content;
+    max-width: max-content;
+
 }
+
+
+/* page end */

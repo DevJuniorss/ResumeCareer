@@ -17,22 +17,17 @@
     <div class="particulas"></div>
     <header>
         <div class="container flex">
-            <!-- quando lançar o site da empresa lembrar de atualizar aqui. -->
-            <!-- <h1 class="oblivium">Oblivium Solution</h1>
-            <img src="" alt="logo Oblivium Solutions"> -->
-
-            <nav class="nav-bar flex flex-row flex-between">
+            <nav class="flex-spread">
                 <ul class="menu flex flex-row">
                     <li><a href="#intro" class="menu-link">E aí tudo bem?</a></li>
-                    <li><a href="#skills" class="menu-link">Skills</a></li>
-                    <li><a href="#techs" class="menu-link">Tecnologias</a></li>
+                    <li><a href="#soft-skills" class="menu-link">Soft Skills</a></li>
+                    <li><a href="#techs" class="menu-link">Hard Skills</a></li>
                     <li><a href="#languages" class="menu-link">Idiomas</a></li>
                     <li><a href="#projects" class="menu-link">Projetos</a></li>
                     <li><a href="#exp" class="menu-link">Experiencias</a></li>
                     <li><a href="#diplomas" class="menu-link">Diplomas</a></li>
                     <li><a href="#contato" class="menu-link">Contato</a></li>
                 </ul>
-                <!-- ativar o toggle e alinhar a direita no topo-->
                 <button id="btn-theme" type="button">
                     <i class="fa-solid fa-moon"></i>
                 </button>
@@ -45,11 +40,10 @@
                 <div class="flex flex-center">
                     <article class="perfil flex flex-center" data-tipo="img-perfil">
                         <img src="../images/profile.png" alt="foto de perfil" class="foto-perfil">
-                        <h1 class="name">Alexandre Júnior</h1>
-                        <h1 class="role">Engenheiro de Software</h1>
+                        <h1>Alexandre Júnior</h1>
+                        <h2>Engenheiro de Software</h2>
                     </article>
                     <div class="intro-box">
-                        <!-- depois adicionar icone de pensamento e jogar o titulo para fora da box -->
                         <p class="intro-title"> E aí, vamos inovar?</p>
                         <p class="intro-paragraph">
                             Ofereço soluções web e mobile como serviços freelancer além de consultoria em alguns casos.
@@ -60,36 +54,44 @@
                             Quer conversar mais sobre?
                         </p>
                         <div class="intro-btn flex flex-row flex-center">
-                            <!-- anexar link para download do cv -->
                             <a href="baixar cv"><button class="btn">Downalod CV</button></a>
-                            <a href="#skills"><button class="btn">Competencias</button></a>
+                            <a href="#techs"><button class="btn">Competencias</button></a>
                             <a href="#contato"><button class="btn btn-alt">Contato</button></a>
                         </div>
-                    </div> <!-- intro-box end-->
-                </div> <!-- flex end-->
-            </div> <!--container end-->
-        </section>
-        <section id="skills" class="skills container flex">
-            <div class="">
-                <h2>Soft Skills</h2>
-                <article class=" flex-evenly">
-                    <ul>
-                        <li>Adaptabilidade</li>
-                        <li>Proatividade</li>
-                        <li>Pensamento Análitico</li>
-                        <li>Pensamento Critico</li>
-                        <li>Trabalho em Equipe</li>
-                        <li>Colaboração Ativa</li>
-                        <li>Comunicação Ética e Eficaz</li>
-                        <li>Mentalidade de Aprendizado Continuo</li>
-                        <li>Resolução de Problemas Orientada a Resultados</li>
-                    </ul>
-                </article>
+                    </div>
+                </div>
             </div>
         </section>
-        <section id="techs" class="techs container flex flex-center">
-            <h2>Hard Skills</h2>
-            <article class="hard-skills-nav">
+        <section id="soft-skills" aria-label="Carrossel de Soft Skills">
+            <nav class="carousel" aria-live="polite">
+                <ul class="track ">
+                    <li>Adaptabilidade</li>
+                    <li>Proatividade</li>
+                    <li>Pensamento Analítico</li>
+                    <li>Pensamento Crítico</li>
+                    <li>Trabalho em Equipe</li>
+                    <li>Colaboração Ativa</li>
+                    <li>Comunicação Ética e Eficaz</li>
+                    <li>Mentalidade de Aprendizado Contínuo</li>
+                    <li>Resolução de Problemas Orientada a Resultados</li>
+
+                    <!-- Duplicação automática do conteúdo para efeito de loop infinito -->
+                    <li>Adaptabilidade</li>
+                    <li>Proatividade</li>
+                    <li>Pensamento Analítico</li>
+                    <li>Pensamento Crítico</li>
+                    <li>Trabalho em Equipe</li>
+                    <li>Colaboração Ativa</li>
+                    <li>Comunicação Ética e Eficaz</li>
+                    <li>Mentalidade de Aprendizado Contínuo</li>
+                    <li>Resolução de Problemas Orientada a Resultados</li>
+                </ul>
+            </nav>
+        </section>
+
+        <section id="techs" class="techs container box">
+            <h2 class="flex-center">Hard Skills</h2>
+            <article class="card flex">
                 <div class="hard-skills-btn flex flex-row flex-center">
                     <a href="#desktop"><button class="btn-desktop btn">Desktop</button></a>
                     <a href="#web"><button class="btn-web btn">Web</button></a>
@@ -103,37 +105,30 @@
                 </div>
             </article>
             <article id="desktop" class="card flex-row ">
-
                 <ul class="flex flex-row">
                     <li>
                         <img src="../images/Techs/Java.svg" alt="logo java">
-                        <span class="bar-fill-vert" style="--h: 60%"><span class="java-skill"></span></span>
-                    </li>
-                    <li>
-                        <h3>C</h3>
-                        <img src="../images/Techs/C++ (CPlusPlus).svg" alt="">
-                        <span class="skill-bar bar-vert"><span class="c-skill"></span></span>
+                        <progress value="70" max="100"></progress>
                     </li>
                     <li>
                         <h3>C++</h3>
-                        <img src="../images/Techs/C++ (CPlusPlus).svg" alt="">
-                        <span class="skill-bar bar-vert"><span class="cpp-skill"></span></span>
+                        <img src="../images/Techs/Cpp.svg" alt="">
+                        <progress value="40" max="100"></progress>
                     </li>
-                    <li class="flex fel-col flex-between">
-                        <h3>Python</h3>
+                    <li class="flex flex-col-rev flex-between">
                         <img src="../images/Techs/Python.svg" alt="">
-                        <span class="skill-bar bar-vert"><span class="py-skill"></span></span>
+                        <progress value="30" max="100"></progress>
                     </li>
                     <li>
                         <h3>C#</h3>
-                        <img src="../images/Techs/C# (CSharp).svg" alt="">
+                        <img src="../images/Techs/C#.svg" alt="">
                         <span class="skill-bar bar-vert"><span class="csharp-skill"></span></span>
                     </li>
                 </ul>
             </article>
             <article id="web" class="card flex ">
                 <ul>
-                    <li class="fel-col-rev flex-between">
+                    <li class="flex-col-rev-rev flex-between">
                         <img src="../images/Techs/HTML5.svg" alt="">
                         <span class="skill-bar bar-vert"><span class="html-skill"></span></span>
                     </li>
@@ -153,41 +148,42 @@
             </article>
             <article id="mobile" class="box">
                 <ul>
-                    <li class="flex fel-col flex-center">
+                    <li class="flex flex-col-rev flex-center">
                         <h3>Java</h3>
                         <img src="../images/Techs/Java.svg" alt="">
                         <span class="skill-bar bar-vert"><span class="java-mobile-skill"></span></span>
                     </li>
-                    <li class="flex fel-col flex-center">
+                    <li class="flex flex-col-rev flex-center">
                         <h3>Kotlin</h3>
                         <img src="../images/Techs/Kotlin.svg" alt="">
                         <span class="skill-bar bar-vert"><span class="kotlin-skill"></span></span>
                     </li>
-                    <li class="flex fel-col flex-center">
-                        <h3>Dart</h3>
-                        <img src="../images/Techs/Dart.svg" alt="">
-                        <span class="skill-bar bar-vert"><span class="dart-skill"></span></span>
+                    <li class="flex flex-col-rev flex-center">
+                        <h3>Flutter</h3>
+                        <img src="../images/Techs/Flutter.svg" alt="">
+                        <span class="skill-bar bar-fill bar-vert"><span class="flutter-skill"></span></span>
                     </li>
+
                 </ul>
             </article>
             <article id="database" class="box">
                 <ul>
-                    <li class="flex fel-col flex-center">
+                    <li class="flex flex-col-rev flex-center">
                         <h3>PostgreSQL</h3>
                         <img src="../images/Techs/PostgresSQL.svg" alt="">
                         <span class="skill-bar bar-vert"><span class="postgre-skill"></span></span>
                     </li>
-                    <li class="flex fel-col flex-center">
+                    <li class="flex flex-col-rev flex-center">
                         <h3>MongoDB</h3>
                         <img src="../images/Techs/MongoDB.svg" alt="">
                         <span class="skill-bar bar-vert"><span class="mongo-skill"></span></span>
                     </li>
-                    <li class="flex fel-col flex-center">
+                    <li class="flex flex-col-rev flex-center">
                         <h3>MySQL</h3>
                         <img src="../images/Techs/MySQL.svg" alt="">
                         <span class="skill-bar bar-vert"><span class="mysql-skill"></span></span>
                     </li>
-                    <li class="flex fel-col flex-center">
+                    <li class="flex flex-col-rev flex-center">
                         <h3>SQLite</h3>
                         <img src="../images/Techs/SQLite.svg" alt="">
                         <span class="skill-bar bar-vert"><span class="sqlite-skill"></span></span>
@@ -196,17 +192,17 @@
             </article>
             <article id="dev-ops-tools" class="box">
                 <ul>
-                    <li class="flex fel-col flex-center">
+                    <li class="flex flex-col-rev flex-center">
                         <h3>Git</h3>
                         <img src="../images/Techs/Git.svg" alt="">
                         <span class="skill-bar bar-vert"><span class="git-skill"></span></span>
                     </li>
-                    <li class="flex fel-col flex-center">
+                    <li class="flex flex-col-rev flex-center">
                         <h3>GitHub</h3>
                         <img src="../images/Techs/GitHub.svg" alt="">
                         <span class="skill-bar bar-vert"><span class="gitHub-skill"></span></span>
                     </li>
-                    <li class="flex fel-col flex-center">
+                    <li class="flex flex-col-rev flex-center">
                         <h3>Git Actions</h3>
                         <img src="../images/Techs/GitHub Actions.svg" alt="">
                         <span class="skill-bar bar-vert"><span class="gitActions-skill"></span></span>
@@ -220,27 +216,27 @@
             </article>
             <article id="cloud" class="box">
                 <ul>
-                    <li class="flex fel-col flex-center">
+                    <li class="flex flex-col-rev flex-center">
                         <h3>AWS Services</h3>
                         <img src="../images/Techs/AWS.svg" alt="">
                         <span class="skill-bar bar-fill bar-vert"><span class="services-skill"></span></span>
                     </li>
-                    <li class="flex fel-col flex-center">
+                    <li class="flex flex-col-rev flex-center">
                         <h3>Firebase</h3>
                         <img src="../images/Techs/Firebase.svg" alt="">
                         <span class="skill-bar bar-fill bar-vert"><span class="friebase-skill"></span></span>
                     </li>
-                    <li class="flex fel-col flex-center">
+                    <li class="flex flex-col-rev flex-center">
                         <h3>Azure</h3>
                         <img src="../images/Techs/Azure.svg" alt="">
                         <span class="skill-bar bar-fill bar-vert"><span class="azure-skill"></span></span>
                     </li>
-                    <li class="flex fel-col flex-center">
+                    <li class="flex flex-col-rev flex-center">
                         <h3>Google Cloud</h3>
                         <img src="../images/Techs/Google Cloud.svg" alt="">
                         <span class="skill-bar bar-fill bar-vert"><span class="google-skill"></span></span>
                     </li>
-                    <li class="flex fel-col flex-center">
+                    <li class="flex flex-col-rev flex-center">
                         <h3>Docker</h3>
                         <img src="../images/Techs/Docker.svg" alt="">
                         <span class="skill-bar bar-fill bar-vert"><span class="docker-skill"></span></span>
@@ -249,51 +245,47 @@
             </article>
             <article id="frameworks" class="box">
                 <ul>
-                    <li class="flex fel-col flex-center">
+                    <li class="flex flex-col-rev flex-center">
                         <h3>React</h3>
                         <img src="../images/Techs/React.svg" alt="">
                         <span class="skill-bar bar-fill bar-vert"><span class="react-skill"></span></span>
                     </li>
-                    <li class="flex fel-col flex-center">
+                    <li class="flex flex-col-rev flex-center">
                         <h3>Vue.js</h3>
                         <img src="../images/Techs/Vue.js.svg" alt="">
                         <span class="skill-bar bar-fill bar-vert"><span class="vue-skill"></span></span>
                     </li>
-                    <li class="flex fel-col flex-center">
-                        <h3>Flutter</h3>
-                        <img src="../images/Techs/Flutter.svg" alt="">
-                        <span class="skill-bar bar-fill bar-vert"><span class="flutter-skill"></span></span>
-                    </li>
+
                 </ul>
             </article>
             <article id="process" class="box">
                 <ul>
-                    <li class="flex fel-col flex-center">
+                    <li class="flex flex-col-rev flex-center">
                         <h3>Scrum</h3>
                         <img src="../images/Techs/Srum.svg" alt="svg scrum">
                         <span class="skill-bar bar-fill bar-vert"><span class="scrum-skill"></span></span>
                     </li>
-                    <li class="flex fel-col flex-center">
+                    <li class="flex flex-col-rev flex-center">
                         <h3>Kanban</h3>
                         <img src="../images/Techs/Kanban.svg" alt="svg kanban">
                         <span class="skill-bar bar-fill bar-vert"><span class="kanban-skill"></span></span>
                     </li>
-                    <li class="flex fel-col flex-center">
+                    <li class="flex flex-col-rev flex-center">
                         <h3>UML</h3>
                         <img src="../images/Techs/Unified Modelling Language (UML).svg" alt="svg uml">
                         <span class="skill-bar bar-fill bar-vert"><span class="uml-skill"></span></span>
                     </li>
-                    <li class="flex fel-col flex-center">
+                    <li class="flex flex-col-rev flex-center">
                         <h3>XP</h3>
                         <img src="../images/Techs/Xp.svg" alt="svg xp">
                         <span class="skill-bar bar-fill bar-vert"><span class="xp-skill"></span></span>
                     </li>
-                    <li class="flex fel-col flex-center">
+                    <li class="flex flex-col-rev flex-center">
                         <h3>Análise de Requisitos</h3>
                         <img src="../images/Techs/Requiriments.svg" alt="svg Requiriments">
                         <span class="skill-bar bar-fill bar-vert"><span class="req-skill"></span></span>
                     </li>
-                    <li class="flex fel-col flex-center">
+                    <li class="flex flex-col-rev flex-center">
                         <h3>Análise de Dados</h3>
                         <img src="../images/Techs/DataAnalisys.svg" alt="svg DataAnalisys">
                         <span class="skill-bar bar-fill bar-vert"><span class="data-analise-skill"></span></span>
@@ -306,7 +298,6 @@
             </article>
 
         </section>
-        <!-- Organizar btn-->
         <section id="languages" class="container flex flex-center">
             <div id="box card flex flex-evenly">
                 <h1>Idiomas</h1>
@@ -472,7 +463,6 @@
                             Projeto Web feito para atualizar web site de da Clínica de Estetica, clinica localizada em
                             Luzern -
                             Suiça, com varios serviços de beleza com agenda aberta esperando voce.
-                            <!-- talvez n de pra ver pq é um projeto particular -->
                             <a href="https://github.com/DevJuniorss/HarmonyClinica" target="_blank"
                                 class="btn-projeto">Ver
                                 repositório</a>
@@ -493,7 +483,8 @@
                     </div>
                 </article>
                 <article class="project-card" data-tipo="projeto-pessoal">
-                    <img src="../images/Projects/logoClinicaSiqueira.jpeg" alt="imagem do projeto Findme" class="img-project">
+                    <img src="../images/Projects/logoClinicaSiqueira.jpeg" alt="imagem do projeto Findme"
+                        class="img-project">
                     <div class="project-info">
                         <h3 class="project-name">Consultorio Siqueira</h3>
                         <p class="project-paragraph">
@@ -530,7 +521,8 @@
                     </div>
                 </article>
                 <article class="project-card" data-tipo="projeto-pessoal">
-                    <img src="../images/Projects/logoMaze.png" alt="imagem do projeto Kerosene Store." class="img-project">
+                    <img src="../images/Projects/logoMaze.png" alt="imagem do projeto Kerosene Store."
+                        class="img-project">
                     <div class="project-info">
                         <h3 class="project-name">MazeRunner</h3>
                         <p class="project-paragraph">
@@ -567,34 +559,27 @@
             <h2>Graduações</h2>
             <ul>
                 <li>Engenharia de Software
-                    <!-- 2019 to 2026 -->
                     <dl></dl>
                 </li>
                 <li> Análise e Desenvolvimento de Sistemas
-                    <!-- 2015-2018 -->
                     <dl></dl>
                 </li>
             </ul>
             <h3>Pos Graduação e Especialização</h3>
             <ul>
                 <li> Telecomunicações com Ênfase em Redes e segurança
-                    <!-- jun 2023 | abri 2024 -->
                     <dl></dl>
                 </li>
                 <li> Computação Forense e Perícia Digital
-                    <!-- nov 2022 | mai 2023 -->
                     <dl></dl>
                 </li>
                 <li> Desenvolvimento de Aplicações mobile
-                    <!-- nov 2022 | mai 2023 -->
                     <dl></dl>
                 </li>
                 <li> MBA em Cybersecurity e cybercrimes
-                    <!-- nov 2022 | mai 2023  -->
                     <dl></dl>
                 </li>
                 <li> Desenvolvimento Web Full Stack
-                    <!-- jan 2022 | jul 2022 -->
                     <dl></dl>
                 </li>
             </ul>
@@ -627,7 +612,7 @@
         </div>
     </footer>
 
-    <script></script>
+    <script src="../JavaScript/main.js"></script>
 
 </body>
 
