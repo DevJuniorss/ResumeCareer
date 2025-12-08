@@ -20,8 +20,20 @@
 
     --glass: rgba(255, 255, 255, 0.06);
     --glass-border: rgba(255, 255, 255, 0.2);
-    
+
     --transition-speed: 0.5s;
+
+    --bar-color: #e74c3c;
+    /* vermelho */
+    --bar-color: #f39c12;
+    /* laranja */
+    --bar-color: #f1c40f;
+    /* amarelo */
+    --bar-color: #2ecc71;
+    /* verde */
+    --bar-color: #1abc9c;
+    /* azul */
+
 }
 
 html {
@@ -36,27 +48,32 @@ body {
 }
 
 /* text Pattern */
-h1, h2, h3, h4, h5, h6{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     margin-bottom: 1rem;
 }
 
-h1{
+h1 {
     font-size: 3rem;
     margin-top: 1rem;
     color: var(--text-light);
 }
 
-h2{
+h2 {
     font-size: 2.5rem;
     color: var(--brand-green-light);
 }
 
-h3{
+h3 {
     font-size: 2rem;
     color: var(--brand-green-light);
 }
 
-p{
+p {
     color: var(--brand-gray-light);
     font-size: 1.4rem;
     text-align: center;
@@ -72,7 +89,7 @@ p{
     padding: 0 1.5rem;
 }
 
-.glass-box{
+.glass-box {
     background: var(--brand-gray);
     border: 1px solid var(--glass-border);
     border-radius: 16px;
@@ -151,18 +168,33 @@ p{
     width: 100%;
 }
 
-.flex-wrap{flex-wrap: wrap;}
-.flex-row {flex-direction: row;}    
-.flex-col-rev {flex-direction: column-reverse;}    
-.flex-between {justify-content: space-between;}    
-.flex-evenly{justify-content: space-evenly;}
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.flex-row {
+    flex-direction: row;
+}
+
+.flex-col-rev {
+    flex-direction: column-reverse;
+}
+
+.flex-between {
+    justify-content: space-between;
+}
+
+.flex-evenly {
+    justify-content: space-evenly;
+}
+
 .flex-center {
     justify-content: center;
     align-items: center;
 }
 
 /* Novo utilitário para layout de barra (Header, etc.) */
-.flex-spread{
+.flex-spread {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -173,64 +205,128 @@ p{
 
 /* Utilitário para Carrossel Horizontal (Soft Skills) */
 .scroll-horizontal {
-    display: flex; /* Coloca os itens em linha */
+    display: flex;
+    /* Coloca os itens em linha */
     flex-direction: row;
-    gap: 2rem; /* Espaçamento entre os itens */
+    gap: 2rem;
+    /* Espaçamento entre os itens */
     width: 100%;
-    overflow-x: auto; /* Permite rolagem horizontal */
+    overflow-x: auto;
+    /* Permite rolagem horizontal */
     overflow-y: hidden;
-    padding: 1rem 0; /* Espaço para padding e barra de rolagem */
-    scroll-snap-type: x mandatory; /* Prepara para o carrossel JS/CSS */
-    list-style: none; /* Remove marcadores da lista */
+    padding: 1rem 0;
+    /* Espaço para padding e barra de rolagem */
+    scroll-snap-type: x mandatory;
+    /* Prepara para o carrossel JS/CSS */
+    list-style: none;
+    /* Remove marcadores da lista */
     padding-left: 0;
 }
 
 .scroll-horizontal li {
-    flex-shrink: 0; /* Impede que os itens encolham */
-    scroll-snap-align: start; /* Alinha o início de cada item no scroll */
-    min-width: 150px; /* Garante que os itens tenham um tamanho mínimo */
+    flex-shrink: 0;
+    /* Impede que os itens encolham */
+    scroll-snap-align: start;
+    /* Alinha o início de cada item no scroll */
+    min-width: 150px;
+    /* Garante que os itens tenham um tamanho mínimo */
     padding: 0.8rem 1.2rem;
-    background-color: var(--brand-gray-dark); /* Fundo para destacar o item da skill */
+    background-color: var(--brand-gray-dark);
+    /* Fundo para destacar o item da skill */
     border-radius: 10px;
     text-align: center;
     font-size: 1.1rem;
     font-weight: 500;
 }
 
-/* Barras de Habilidate */
-/* corrigir */
-progress {
-    width: 120px;
-    height: 10px;
-    appearance: none;
-    -webkit-appearance: none;
+/* Barras de Habilidate troquei de volta para span depois que aprendi que é melhor*/
+/* container das barras */
+/* --- FIX DE ALINHAMENTO DOS NÍVEIS + BARRAS --- */
+/* CONTAINER DO GRÁFICO */
+.skills-wrapper {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    /* níveis | barras */
+    gap: 40px;
+    padding: 20px 0;
+}
+
+/* COLUNA DA ESQUERDA */
+.levels {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+.levels span {
+    color: #cfcfcf;
+    font-size: 14px;
+}
+
+/* COLUNA DAS BARRAS */
+.bars {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    gap: 30px;
+}
+
+/* CADA BLOCO DE SKILL */
+.skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90px;
+}
+
+/* IMG DA LINGUAGEM */
+.skill img {
+    width: 45px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/* BARRA */
+.bar {
+    width: 100%;
+    height: 200px;
+    background: repeating-linear-gradient(to top,
+            rgba(255, 255, 255, 0.08),
+            rgba(255, 255, 255, 0.08) 18px,
+            rgba(255, 255, 255, 0.02) 18px,
+            rgba(255, 255, 255, 0.02) 36px);
     border-radius: 10px;
     overflow: hidden;
+    position: relative;
 }
 
-/* Fundo */
-progress::-webkit-progress-bar {
-    background: var(--brand-gray-light);
-    border-radius: 10px;
+/* PREENCHIMENTO DA BARRA */
+.bar div {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: var(--value);
+    background: linear-gradient(#7dfb8c, #58c96e);
+    animation: animateBar 1.4s ease forwards;
 }
 
-/* Barra preenchida */
-progress::-webkit-progress-value {
-    background: var(--brand-green);
-    border-radius: 10px;
-}
-
-progress.animate::-webkit-progress-value {
-    animation: fillBar 2s ease-out forwards;
-}
-
-@keyframes fillBar {
+@keyframes animateBar {
     from {
-        width: 0%;
+        height: 0;
     }
+
     to {
-        width: 100%; /* o navegador ajusta internamente para o value/max */
+        height: var(--value);
     }
+}
+
+/* PORCENTAGEM EMBAIXO */
+.skill p {
+    margin-top: 8px;
+    font-weight: bold;
+    color: #7dfb8c;
 }
 
 /* Default configs end*/
@@ -251,7 +347,7 @@ progress.animate::-webkit-progress-value {
         var(--brand-dark);
 }
 
-header{
+header {
     position: sticky;
     width: 100%;
     top: 0;
@@ -300,7 +396,7 @@ header .container {
 
 /* corrijir importe de fontawesome*/
 #btn-theme {
-     border: none;
+    border: none;
     padding: 0.5rem 1rem;
     border-radius: 32px;
     font-size: 16px;
@@ -309,6 +405,7 @@ header .container {
     cursor: pointer;
     color: var(--text-dark);
     font-size: 1rem;
+    align-self: last baseline;
 }
 
 .intro {
@@ -356,61 +453,78 @@ header .container {
 }
 
 /* softskills */
-
 #soft-skills {
-  padding: 2rem 0;
-  background-color: #f5f5f5;
+    width: 100%;
+    padding: 2rem;
+    background: linear-gradient(90deg, #0d5f4d, #138f6e);
+    text-align: center;
 }
 
-/* container do carrossel */
+/* Container do carrossel */
 .carousel {
-  width: 100%;
-  overflow: hidden;
+    width: 100%;
+    overflow: hidden;
 }
 
-/* faixa deslizante */
+/* Faixa deslizante */
 .track {
-  display: flex;
-  gap: 2.5rem;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  animation: scroll 22s linear infinite;
+    display: flex;
+    gap: 2.5rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    animation: scroll 22s linear infinite;
 }
 
-/* item individual */
+/* Cada item (li) com destaque */
 .track li {
-  white-space: nowrap;
-  font-size: 1.1rem;
-  font-weight: 600;
-  padding: 0.6rem 1.2rem;
-  background: #e1e1e1;
-  border-radius: 12px;
-  color: #222;
-  user-select: none;
+    white-space: nowrap;
+    font-size: 1.15rem;
+    font-weight: 700;
+    padding: 0.7rem 1.4rem;
+
+    /* Destaque moderno com cores animadas */
+    background: linear-gradient(135deg, #ffffff, #d1f5e1);
+    border-radius: 14px;
+    color: #0f3e33;
+
+    /* Sombra suave para destaque */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+
+    /* Suavidade da transição */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* animação */
+/* Efeito de hover: ainda mais profissional */
+.track li:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+    background: linear-gradient(135deg, #baffda, #ffffff);
+}
+
+/* Animação da faixa */
 @keyframes scroll {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
 }
 
-/* responsividade */
+/* Responsividade */
 @media (max-width: 600px) {
-  .track {
-    gap: 1.2rem;
-  }
+    .track {
+        gap: 1.2rem;
+    }
 
-  .track li {
-    font-size: 0.95rem;
-    padding: 0.5rem 1rem;
-  }
+    .track li {
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
+    }
 }
+
 
 .techs {
     width: 100%;
@@ -420,4 +534,39 @@ header .container {
 }
 
 
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    text-align: center;
+    background-color: var(--brand-gray);
+}
+
+footer:last-of-type{
+    margin-top: 40px;
+}
+
+footer p{
+    color: var(--brand-gray-light);
+}
+
+.social {
+    display: flex;
+    gap: 10px;
+}
+
+.social img{
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: space-between;
+    object-fit: contain;
+    transition: 0.3s ease-in;
+}
+
+.social a:hover img{
+    transform: scale(1.1);
+}
 /* page end */

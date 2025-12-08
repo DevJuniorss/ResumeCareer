@@ -63,6 +63,7 @@
             </div>
         </section>
         <section id="soft-skills" aria-label="Carrossel de Soft Skills">
+            <h2>Soft Skills</h2>
             <nav class="carousel" aria-live="polite">
                 <ul class="track ">
                     <li>Adaptabilidade</li>
@@ -104,29 +105,98 @@
                     <a href="#interest"><button class="btn-interest btn">Interest</button></a>
                 </div>
             </article>
-            <article id="desktop" class="card flex-row ">
-                <ul class="flex flex-row">
-                    <li>
-                        <img src="../images/Techs/Java.svg" alt="logo java">
-                        <progress value="70" max="100"></progress>
-                    </li>
-                    <li>
-                        <h3>C++</h3>
-                        <img src="../images/Techs/Cpp.svg" alt="">
-                        <progress value="40" max="100"></progress>
-                    </li>
-                    <li class="flex flex-col-rev flex-between">
-                        <img src="../images/Techs/Python.svg" alt="">
-                        <progress value="30" max="100"></progress>
-                    </li>
-                    <li>
-                        <h3>C#</h3>
-                        <img src="../images/Techs/C#.svg" alt="">
-                        <span class="skill-bar bar-vert"><span class="csharp-skill"></span></span>
-                    </li>
-                </ul>
-            </article>
-            <article id="web" class="card flex ">
+            <!-- desktop -->
+            <div class="skills-wrapper">
+                <div class="levels">
+                    <span>Expert</span>
+                    <span>Proficiente</span>
+                    <span>Avançado</span>
+                    <span>Intermediário</span>
+                    <span>Básico</span>
+                    <span>Iniciante</span>
+                </div>
+
+                <div class="bars">
+                    <div class="skill">
+                        <img src="../images/Techs/Java.svg" />
+                        <div class="bar">
+                            <div style="--value:70%"></div>
+                        </div>
+                        <p>70%</p>
+                    </div>
+
+                    <div class="skill">
+                        <img src="../images/Techs/Cpp.svg" />
+                        <div class="bar">
+                            <div style="--value:40%"></div>
+                        </div>
+                        <p>40%</p>
+                    </div>
+
+                    <div class="skill">
+                        <img src="../images/Techs/Python.svg" />
+                        <div class="bar">
+                            <div style="--value:30%"></div>
+                        </div>
+                        <p>30%</p>
+                    </div>
+
+                    <div class="skill">
+                        <img src="../images/Techs/Csharp.svg" />
+                        <div class="bar">
+                            <div style="--value:60%"></div>
+                        </div>
+                        <p>60%</p>
+                    </div>
+                </div>
+            </div>
+             <!-- web -->
+            <div class="skills-wrapper">
+                <div class="levels">
+                    <span>Expert</span>
+                    <span>Proficiente</span>
+                    <span>Avançado</span>
+                    <span>Intermediário</span>
+                    <span>Básico</span>
+                    <span>Iniciante</span>
+                </div>
+
+                <div class="bars">
+                    <div class="skill">
+                        <img src="../images/Techs/HTML5.svg" />
+                        <div class="bar">
+                            <div style="--value:95%"></div>
+                        </div>
+                        <p>95%</p>
+                    </div>
+
+                    <div class="skill">
+                        <img src="../images/Techs/CSS3.svg" />
+                        <div class="bar">
+                            <div style="--value:70%"></div>
+                        </div>
+                        <p>70%</p>
+                    </div>
+
+                    <div class="skill">
+                        <img src="../images/Techs/JavaScript.svg" />
+                        <div class="bar">
+                            <div style="--value:50%"></div>
+                        </div>
+                        <p>50%</p>
+                    </div>
+
+                    <div class="skill">
+                        <img src="../images/Techs/TypeScript.svg" />
+                        <div class="bar">
+                            <div style="--value:60%"></div>
+                        </div>
+                        <p>60%</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <article id="web" class="card flex ">
                 <ul>
                     <li class="flex-col-rev-rev flex-between">
                         <img src="../images/Techs/HTML5.svg" alt="">
@@ -145,8 +215,46 @@
                         <span class="skill-bar bar-vert"><span class="tsx-skill"></span></span>
                     </li>
                 </ul>
-            </article>
-            <article id="mobile" class="box">
+            </article> -->
+            <!-- mobile -->
+            <div class="skills-wrapper">
+                <div class="levels">
+                    <span>Expert</span>
+                    <span>Proficiente</span>
+                    <span>Avançado</span>
+                    <span>Intermediário</span>
+                    <span>Básico</span>
+                    <span>Iniciante</span>
+                </div>
+
+                <div class="bars">
+                    <div class="skill">
+                        <img src="../images/Techs/Java.svg" />
+                        <div class="bar">
+                            <div style="--value:80%"></div>
+                        </div>
+                        <p>80%</p>
+                    </div>
+
+                    <div class="skill">
+                        <img src="../images/Techs/Kotlin.svg" />
+                        <div class="bar">
+                            <div style="--value:30%"></div>
+                        </div>
+                        <p>30%</p>
+                    </div>
+
+                    <div class="skill">
+                        <img src="../images/Techs/Flutter.svg" />
+                        <div class="bar">
+                            <div style="--value:50%"></div>
+                        </div>
+                        <p>20%</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- <article id="mobile" class="box">
                 <ul>
                     <li class="flex flex-col-rev flex-center">
                         <h3>Java</h3>
@@ -165,8 +273,53 @@
                     </li>
 
                 </ul>
-            </article>
-            <article id="database" class="box">
+            </article> -->
+            <!-- database -->
+            <div class="skills-wrapper">
+                <div class="levels">
+                    <span>Expert</span>
+                    <span>Proficiente</span>
+                    <span>Avançado</span>
+                    <span>Intermediário</span>
+                    <span>Básico</span>
+                    <span>Iniciante</span>
+                </div>
+
+                <div class="bars">
+                    <div class="skill">
+                        <img src="../images/Techs/PostgresSQL.svg" />
+                        <div class="bar">
+                            <div style="--value:80%"></div>
+                        </div>
+                        <p>80%</p>
+                    </div>
+
+                    <div class="skill">
+                        <img src="../images/Techs/MySQL.svg" />
+                        <div class="bar">
+                            <div style="--value:30%"></div>
+                        </div>
+                        <p>70%</p>
+                    </div>
+
+                    <div class="skill">
+                        <img src="../images/Techs/SQLite.svg" />
+                        <div class="bar">
+                            <div style="--value:50%"></div>
+                        </div>
+                        <p>80%</p>
+                    </div>
+                    <div class="skill">
+                        <img src="../images/Techs/MongoDB.svg" />
+                        <div class="bar">
+                            <div style="--value:50%"></div>
+                        </div>
+                        <p>40%</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <article id="database" class="box">
                 <ul>
                     <li class="flex flex-col-rev flex-center">
                         <h3>PostgreSQL</h3>
@@ -189,8 +342,53 @@
                         <span class="skill-bar bar-vert"><span class="sqlite-skill"></span></span>
                     </li>
                 </ul>
-            </article>
-            <article id="dev-ops-tools" class="box">
+            </article> -->
+            <!-- devops -->
+             <div class="skills-wrapper">
+                <div class="levels">
+                    <span>Expert</span>
+                    <span>Proficiente</span>
+                    <span>Avançado</span>
+                    <span>Intermediário</span>
+                    <span>Básico</span>
+                    <span>Iniciante</span>
+                </div>
+
+                <div class="bars">
+                    <div class="skill">
+                        <img src="../images/Techs/Git.svg" />
+                        <div class="bar">
+                            <div style="--value:80%"></div>
+                        </div>
+                        <p>80%</p>
+                    </div>
+
+                    <div class="skill">
+                        <img src="../images/Techs/GitHub.svg" />
+                        <div class="bar">
+                            <div style="--value:80%"></div>
+                        </div>
+                        <p>80%</p>
+                    </div>
+
+                    <div class="skill">
+                        <img src="../images/Techs/GitHubActions.svg" />
+                        <div class="bar">
+                            <div style="--value:50%"></div>
+                        </div>
+                        <p>50%</p>
+                    </div>
+                    <div class="skill">
+                        <img src="../images/Techs/GitLab.svg" />
+                        <div class="bar">
+                            <div style="--value:50%"></div>
+                        </div>
+                        <p>50%</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <article id="dev-ops-tools" class="box">
                 <ul>
                     <li class="flex flex-col-rev flex-center">
                         <h3>Git</h3>
@@ -213,8 +411,61 @@
                         <span class="skill-bar bar-vert"><span class="gitLab-skill"></span></span>
                     </li>
                 </ul>
-            </article>
-            <article id="cloud" class="box">
+            </article> -->
+            <!-- cloud -->
+             <div class="skills-wrapper">
+                <div class="levels">
+                    <span>Expert</span>
+                    <span>Proficiente</span>
+                    <span>Avançado</span>
+                    <span>Intermediário</span>
+                    <span>Básico</span>
+                    <span>Iniciante</span>
+                </div>
+
+                <div class="bars">
+                    <div class="skill">
+                        <img src="../images/Techs/AWS.svg" />
+                        <div class="bar">
+                            <div style="--value:80%"></div>
+                        </div>
+                        <p>80%</p>
+                    </div>
+
+                    <div class="skill">
+                        <img src="../images/Techs/Firebase.svg" />
+                        <div class="bar">
+                            <div style="--value:30%"></div>
+                        </div>
+                        <p>30%</p>
+                    </div>
+
+                    <div class="skill">
+                        <img src="../images/Techs/Azure.svg" />
+                        <div class="bar">
+                            <div style="--value:45%"></div>
+                        </div>
+                        <p>45%</p>
+                    </div>
+                    <div class="skill">
+                        <img src="../images/Techs/GoogleCloud.svg" />
+                        <div class="bar">
+                            <div style="--value:45%"></div>
+                        </div>
+                        <p>45%</p>
+                    </div>
+                    <div class="skill">
+                        <img src="../images/Techs/Docker.svg" />
+                        <div class="bar">
+                            <div style="--value:40%"></div>
+                        </div>
+                        <p>40%</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- <article id="cloud" class="box">
                 <ul>
                     <li class="flex flex-col-rev flex-center">
                         <h3>AWS Services</h3>
@@ -233,7 +484,7 @@
                     </li>
                     <li class="flex flex-col-rev flex-center">
                         <h3>Google Cloud</h3>
-                        <img src="../images/Techs/Google Cloud.svg" alt="">
+                        <img src="../images/Techs/GoogleCloud.svg" alt="">
                         <span class="skill-bar bar-fill bar-vert"><span class="google-skill"></span></span>
                     </li>
                     <li class="flex flex-col-rev flex-center">
@@ -242,8 +493,55 @@
                         <span class="skill-bar bar-fill bar-vert"><span class="docker-skill"></span></span>
                     </li>
                 </ul>
-            </article>
-            <article id="frameworks" class="box">
+            </article> -->
+            <!-- frameworks -->
+             <div class="skills-wrapper">
+                <div class="levels">
+                    <span>Expert</span>
+                    <span>Proficiente</span>
+                    <span>Avançado</span>
+                    <span>Intermediário</span>
+                    <span>Básico</span>
+                    <span>Iniciante</span>
+                </div>
+
+                <div class="bars">
+                    <div class="skill">
+                        <img src="../images/Techs/Vue.js.svg" />
+                        <div class="bar">
+                            <div style="--value:80%"></div>
+                        </div>
+                        <p>80%</p>
+                    </div>
+
+                    <div class="skill">
+                        <img src="../images/Techs/React.svg" />
+                        <div class="bar">
+                            <div style="--value:30%"></div>
+                        </div>
+                        <p>30%</p>
+                    </div>
+
+                    <div class="skill">
+                        <img src="../images/Techs/Angular.svg" />
+                        <div class="bar">
+                            <div style="--value:10%"></div>
+                        </div>
+                        <p>10%</p>
+                    </div>
+                    <div class="skill">
+                        <img src="../images/Techs/Spring.svg" />
+                        <div class="bar">
+                            <div style="--value:40%"></div>
+                        </div>
+                        <p>40%</p>
+                    </div>
+
+                    
+                </div>
+            </div>
+
+            <!-- <article id="frameworks" class="box">
                 <ul>
                     <li class="flex flex-col-rev flex-center">
                         <h3>React</h3>
@@ -257,8 +555,46 @@
                     </li>
 
                 </ul>
-            </article>
-            <article id="process" class="box">
+            </article> -->
+            <!-- process -->
+             <div class="skills-wrapper">
+                <div class="levels">
+                    <span>Expert</span>
+                    <span>Proficiente</span>
+                    <span>Avançado</span>
+                    <span>Intermediário</span>
+                    <span>Básico</span>
+                    <span>Iniciante</span>
+                </div>
+
+                <div class="bars">
+                    <div class="skill">
+                        <img src="../images/Techs/scrum.svg" />
+                        <div class="bar">
+                            <div style="--value:80%"></div>
+                        </div>
+                        <p>80%</p>
+                    </div>
+
+                    <div class="skill">
+                        <img src="../images/Techs/kanban.svg" />
+                        <div class="bar">
+                            <div style="--value:30%"></div>
+                        </div>
+                        <p>30%</p>
+                    </div>
+
+                    <div class="skill">
+                        <img src="../images/Techs/uml.svg" />
+                        <div class="bar">
+                            <div style="--value:80%"></div>
+                        </div>
+                        <p>UML</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <article id="process" class="box">
                 <ul>
                     <li class="flex flex-col-rev flex-center">
                         <h3>Scrum</h3>
@@ -280,21 +616,11 @@
                         <img src="../images/Techs/Xp.svg" alt="svg xp">
                         <span class="skill-bar bar-fill bar-vert"><span class="xp-skill"></span></span>
                     </li>
-                    <li class="flex flex-col-rev flex-center">
-                        <h3>Análise de Requisitos</h3>
-                        <img src="../images/Techs/Requiriments.svg" alt="svg Requiriments">
-                        <span class="skill-bar bar-fill bar-vert"><span class="req-skill"></span></span>
-                    </li>
-                    <li class="flex flex-col-rev flex-center">
-                        <h3>Análise de Dados</h3>
-                        <img src="../images/Techs/DataAnalisys.svg" alt="svg DataAnalisys">
-                        <span class="skill-bar bar-fill bar-vert"><span class="data-analise-skill"></span></span>
-                    </li>
                 </ul>
-            </article>
+            </article> -->
+
             <article id="interest" class="box">
                 <h2>Em breve...</h2>
-                <img src="../images/Techs/CommingSoon.svg" alt="svg emBreve">
             </article>
 
         </section>
