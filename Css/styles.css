@@ -534,6 +534,304 @@ header .container {
 }
 
 
+/* === IDIOMAS: boxes + barras horizontais (sem inline style) === */
+
+#languages {
+    width: 100%;
+    padding: 3rem 1.5rem;
+}
+
+/* Grid de idiomas */
+.languages-card {
+    width: 100%;
+    max-width: 1200px;
+    margin: 2rem auto 0;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+}
+
+/* Box de cada idioma (estilo “glass” como no resto do site) */
+.language-box {
+    background: var(--brand-gray);
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+    backdrop-filter: blur(16px);
+
+    padding: 1.5rem;
+    text-align: left;
+
+    transition: transform var(--transition-speed) ease;
+}
+
+.language-box:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.language-box h3 {
+    margin-bottom: 1rem;
+}
+
+/* Linha de skill (label + barra) */
+.lang-skill {
+    display: grid;
+    grid-template-columns: 90px 1fr;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.85rem;
+}
+
+.lang-label {
+    font-size: 1rem;
+    color: var(--brand-gray-light);
+}
+
+/* Barra de progresso */
+.lang-bar {
+    height: 12px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid var(--glass-border);
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.lang-fill {
+    display: block;
+    height: 100%;
+    border-radius: 999px;
+    background: linear-gradient(90deg, var(--brand-green), var(--brand-green-light));
+    width: 0;
+    transition: width 0.6s ease;
+}
+
+/* Níveis (boas práticas: classes reutilizáveis) */
+.lvl-10 { width: 10%; }
+.lvl-20 { width: 20%; }
+.lvl-25 { width: 25%; }
+.lvl-30 { width: 30%; }
+.lvl-35 { width: 35%; }
+.lvl-40 { width: 40%; }
+.lvl-45 { width: 45%; }
+.lvl-50 { width: 50%; }
+.lvl-55 { width: 55%; }
+.lvl-60 { width: 60%; }
+.lvl-65 { width: 65%; }
+.lvl-70 { width: 70%; }
+.lvl-75 { width: 75%; }
+.lvl-80 { width: 80%; }
+.lvl-85 { width: 85%; }
+.lvl-90 { width: 90%; }
+.lvl-95 { width: 95%; }
+.lvl-100 { width: 100%; }
+
+
+/* === PROJETOS: centralizado + estilo tipo card/box === */
+/* lembrar de apos apresentar corrigir e usar patterns depois */
+.projects {
+    width: 100%;
+    padding: 3rem 1.5rem;
+    text-align: center;
+}
+
+/* Título centralizado */
+.projects .projects-title {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* Caixa que segura os cards (grid responsivo) */
+.projects-box {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    justify-items: center; /* centraliza cada card no grid */
+}
+
+/* Card de projeto no estilo "glass" */
+.project-card {
+    width: 100%;
+    max-width: 380px;
+
+    background: var(--brand-gray);
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+    backdrop-filter: blur(16px);
+
+    overflow: hidden;
+    transition: transform var(--transition-speed) ease;
+}
+
+/* Hover igual aos cards */
+.project-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Imagem do projeto padronizada */
+.img-project {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Conteúdo interno do card */
+.project-info {
+    padding: 1.25rem;
+    text-align: left;
+}
+
+.project-name {
+    margin-bottom: 0.6rem;
+}
+
+/* Texto do projeto */
+.project-paragraph {
+    text-align: left;
+    font-size: 1.1rem;
+    line-height: 1.6rem;
+}
+
+/* Link “Ver repositório” com cara de botão */
+.btn-projeto {
+    display: inline-block;
+    margin-top: 0.9rem;
+    padding: 0.5rem 0.9rem;
+
+    border-radius: 12px;
+    background: var(--brand-green);
+    color: var(--text-dark);
+    font-weight: 700;
+    text-decoration: none;
+
+    transition: 0.3s ease;
+}
+
+.btn-projeto:hover {
+    opacity: 0.9;
+    transform: scale(1.04);
+}
+
+/* === Ajustes SOMENTE para a seção de Experiências === */
+#exp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Centraliza o título */
+#exp > h2 {
+    text-align: center;
+}
+
+/* Card mais largo apenas nessa seção */
+#exp .card {
+    max-width: 900px;   /* largura maior */
+    width: 100%;
+}
+
+/* Texto longo alinhado para leitura */
+#exp .conteudo {
+    text-align: left;
+}
+
+/* Lista de atividades */
+#exp ul {
+    margin-top: 1rem;
+    padding-left: 1.5rem;
+    text-align: left;
+}
+
+#exp li {
+    margin-bottom: 0.6rem;
+    line-height: 1.6;
+}
+
+/* Centralização da seção de diplomas */
+.diplomas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    margin: 3rem auto;
+    padding: 2rem;
+
+    max-width: 700px;
+
+    background: var(--brand-gray);
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+    backdrop-filter: blur(16px);
+}
+
+/* Centraliza listas */
+.diplomas ul {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 2rem 0;
+}
+
+/* Espaçamento entre os itens */
+.diplomas li {
+    margin-bottom: 0.8rem;
+    font-size: 1.3rem;
+}
+
+/* Ajuste visual dos subtítulos */
+.diplomas h3 {
+    margin-top: 2rem;
+}
+
+
+/* Centralização da seção de contato */
+.contato {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 3rem auto;
+    padding: 2rem;
+    max-width: 600px;
+    background: var(--brand-gray);
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+    backdrop-filter: blur(16px);
+
+    
+}
+
+.contato article {
+    width: 100%;
+    max-width: 600px;
+}
+aside {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    margin: 3rem auto;
+    padding: 2rem;
+    max-width: 600px;
+
+    background: var(--brand-gray);
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+    backdrop-filter: blur(16px);
+}
+
+
+
 footer{
     display: flex;
     justify-content: center;
